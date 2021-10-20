@@ -4146,7 +4146,6 @@ function query$11(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -4481,7 +4480,6 @@ function query$12(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -4834,7 +4832,6 @@ function query$13(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -5188,7 +5185,6 @@ function query$14(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -5542,7 +5538,6 @@ function query$15(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -5889,7 +5884,6 @@ function query$16(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -6243,7 +6237,6 @@ function query$17(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -6597,7 +6590,6 @@ function query$18(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -6950,7 +6942,6 @@ function query$19(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -7303,7 +7294,6 @@ function query$20(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -7657,7 +7647,6 @@ function query$21(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -8011,7 +8000,6 @@ function query$22(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -8365,7 +8353,6 @@ function query$23(client) {
         metafields.add("edges", function (edges) {
           edges.add("node", function (node) {
             node.add("id");
-            node.add("namespace");
             node.add("key");
             node.add("value");
           });
