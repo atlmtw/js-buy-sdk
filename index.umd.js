@@ -4144,6 +4144,7 @@ function query$11(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -4478,6 +4479,7 @@ function query$12(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -4830,6 +4832,7 @@ function query$13(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -5183,6 +5186,7 @@ function query$14(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -5536,6 +5540,7 @@ function query$15(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -5882,6 +5887,7 @@ function query$16(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -6235,6 +6241,7 @@ function query$17(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -6588,6 +6595,7 @@ function query$18(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -6940,6 +6948,7 @@ function query$19(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -7292,6 +7301,7 @@ function query$20(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -7645,6 +7655,7 @@ function query$21(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -7998,6 +8009,7 @@ function query$22(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -8351,6 +8363,7 @@ function query$23(client) {
         }
       }, function (metafields) {
         metafields.add("edges", function (edges) {
+          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
             node.add("key");
@@ -9484,6 +9497,7 @@ var MetafieldEdge = {
   "name": "MetafieldEdge",
   "kind": "OBJECT",
   "fieldBaseTypes": {
+    "cursor": "String",
     "node": "Metafield"
   },
   "implementsNode": false
