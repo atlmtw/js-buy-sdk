@@ -4140,8 +4140,7 @@ function query$11(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -4480,8 +4479,7 @@ function query$12(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -4838,8 +4836,7 @@ function query$13(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -5197,8 +5194,7 @@ function query$14(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -5556,8 +5552,7 @@ function query$15(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -5908,8 +5903,7 @@ function query$16(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -6267,8 +6261,7 @@ function query$17(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -6626,8 +6619,7 @@ function query$18(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -6984,8 +6976,7 @@ function query$19(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -7342,8 +7333,7 @@ function query$20(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -7701,8 +7691,7 @@ function query$21(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -8060,8 +8049,7 @@ function query$22(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -8419,8 +8407,7 @@ function query$23(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10,
-          namespace: "product_fields"
+          first: 10
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
