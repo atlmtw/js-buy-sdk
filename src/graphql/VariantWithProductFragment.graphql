@@ -3,7 +3,7 @@ fragment VariantWithProductFragment on ProductVariant {
   product {
     id
     handle,
-    metafields(first:10,namespace:'product_fields.cart_recommendation') {
+    metafields(first:10,namespace:"product_fields.cart_recommendation") {
       pageInfo {
         hasNextPage
         hasPreviousPage
