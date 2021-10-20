@@ -2,6 +2,20 @@ fragment VariantWithProductFragment on ProductVariant {
   ...VariantFragment
   product {
     id
-    handle
+    handle,
+    metafields(first:10,namespace:'product_fields.cart_recommendation') {
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+      }
+      edges {
+        cursor
+        node {
+          id
+          key
+          value
+        }
+      }
+    }
   }
 }
