@@ -4,14 +4,10 @@ fragment VariantWithProductFragment on ProductVariant {
     id
     handle,
     metafields(first:10) {
-      pageInfo {
-        hasNextPage
-        hasPreviousPage
-      }
       edges {
-        cursor
         node {
           id
+          namespace
           key
           value
         }

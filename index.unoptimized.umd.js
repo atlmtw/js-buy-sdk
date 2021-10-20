@@ -4143,14 +4143,10 @@ function query$11(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -4482,14 +4478,10 @@ function query$12(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -4839,14 +4831,10 @@ function query$13(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -5197,14 +5185,10 @@ function query$14(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -5555,14 +5539,10 @@ function query$15(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -5906,14 +5886,10 @@ function query$16(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -6264,14 +6240,10 @@ function query$17(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -6622,14 +6594,10 @@ function query$18(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -6979,14 +6947,10 @@ function query$19(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -7336,14 +7300,10 @@ function query$20(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -7694,14 +7654,10 @@ function query$21(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -8052,14 +8008,10 @@ function query$22(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
@@ -8410,14 +8362,10 @@ function query$23(client) {
           first: 10
         }
       }, function (metafields) {
-        metafields.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
         metafields.add("edges", function (edges) {
-          edges.add("cursor");
           edges.add("node", function (node) {
             node.add("id");
+            node.add("namespace");
             node.add("key");
             node.add("value");
           });
