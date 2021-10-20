@@ -4137,6 +4137,10 @@ function query$11(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -4472,6 +4476,10 @@ function query$12(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -4825,6 +4833,10 @@ function query$13(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -5179,6 +5191,10 @@ function query$14(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -5533,6 +5549,10 @@ function query$15(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -5880,6 +5900,10 @@ function query$16(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -6234,6 +6258,10 @@ function query$17(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -6588,6 +6616,10 @@ function query$18(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -6941,6 +6973,10 @@ function query$19(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -7294,6 +7330,10 @@ function query$20(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -7648,6 +7688,10 @@ function query$21(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -8002,6 +8046,10 @@ function query$22(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -8356,6 +8404,10 @@ function query$23(client) {
           first: 10
         }
       }, function (metafields) {
+        metafields.add("pageInfo", function (pageInfo) {
+          pageInfo.add("hasNextPage");
+          pageInfo.add("hasPreviousPage");
+        });
         metafields.add("edges", function (edges) {
           edges.add("cursor");
           edges.add("node", function (node) {
@@ -9482,7 +9534,8 @@ var MetafieldConnection = {
   "name": "MetafieldConnection",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "edges": "MetafieldEdge"
+    "edges": "MetafieldEdge",
+    "pageInfo": "PageInfo"
   },
   "implementsNode": false
 };
