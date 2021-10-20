@@ -2510,6 +2510,24 @@ function query(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
+    });
     root.add("images", {
       args: {
         first: 250
@@ -2646,6 +2664,24 @@ function query$1(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -2786,6 +2822,24 @@ function query$2(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -2935,6 +2989,24 @@ function query$3(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -3256,6 +3328,24 @@ function query$5(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
+    });
     root.add("images", {
       args: {
         first: 250
@@ -3478,6 +3568,24 @@ function query$7(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
+    });
     root.add("images", {
       args: {
         first: 250
@@ -3642,6 +3750,24 @@ function query$8(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -4140,7 +4266,7 @@ function query$11(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -4479,7 +4605,7 @@ function query$12(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -4836,7 +4962,7 @@ function query$13(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -5194,7 +5320,7 @@ function query$14(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -5552,7 +5678,7 @@ function query$15(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -5903,7 +6029,7 @@ function query$16(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -6261,7 +6387,7 @@ function query$17(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -6619,7 +6745,7 @@ function query$18(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -6976,7 +7102,7 @@ function query$19(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -7333,7 +7459,7 @@ function query$20(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -7691,7 +7817,7 @@ function query$21(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -8049,7 +8175,7 @@ function query$22(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
@@ -8407,7 +8533,7 @@ function query$23(client) {
       product.add("handle");
       product.add("metafields", {
         args: {
-          first: 10
+          first: 5
         }
       }, function (metafields) {
         metafields.add("pageInfo", function (pageInfo) {
