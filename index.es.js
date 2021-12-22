@@ -4258,6 +4258,9 @@ function query$11(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -4597,6 +4600,9 @@ function query$12(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -4954,6 +4960,9 @@ function query$13(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -5312,6 +5321,9 @@ function query$14(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -5670,6 +5682,9 @@ function query$15(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -6021,6 +6036,9 @@ function query$16(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -6379,6 +6397,9 @@ function query$17(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -6737,6 +6758,9 @@ function query$18(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -7094,6 +7118,9 @@ function query$19(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -7451,6 +7478,9 @@ function query$20(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -7809,6 +7839,9 @@ function query$21(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -8167,6 +8200,9 @@ function query$22(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5
@@ -8525,6 +8561,9 @@ function query$23(client) {
     root.add("product", function (product) {
       product.add("id");
       product.add("handle");
+      product.add("vendor");
+      product.add("title");
+      product.add("productType");
       product.add("metafields", {
         args: {
           first: 5

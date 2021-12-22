@@ -3,6 +3,9 @@ fragment VariantWithProductFragment on ProductVariant {
   product {
     id
     handle,
+    vendor,
+    title,
+    productType,
     metafields(first: 5) {
       pageInfo {
         hasNextPage
