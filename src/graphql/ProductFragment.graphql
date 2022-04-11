@@ -53,12 +53,14 @@ fragment ProductFragment on Product {
     edges {
       cursor
       node {
-        id
         alt
         mediaContentType
-        host
-        originUrl
-        embedUrl
+        ... on ExternalVideo {
+          id
+          host
+          originUrl
+          embedUrl
+        }
       }
     }
   }

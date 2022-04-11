@@ -2522,6 +2522,29 @@ function query(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -2652,6 +2675,29 @@ function query$1(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -2788,6 +2834,29 @@ function query$2(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -2936,6 +3005,29 @@ function query$3(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -3066,6 +3158,29 @@ function query$4(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -3405,6 +3520,29 @@ function query$6(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -3623,6 +3761,29 @@ function query$8(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -3781,6 +3942,29 @@ function query$9(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -9309,6 +9493,18 @@ var Domain = {
   "implementsNode": false
 };
 
+var ExternalVideo = {
+  "name": "ExternalVideo",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "embedUrl": "URL",
+    "host": "MediaHost",
+    "id": "ID",
+    "originUrl": "URL"
+  },
+  "implementsNode": true
+};
+
 var Float = {
   "name": "Float",
   "kind": "SCALAR"
@@ -9396,6 +9592,46 @@ var ManualDiscountApplication = {
     "title": "String"
   },
   "implementsNode": false
+};
+
+var Media = {
+  "name": "Media",
+  "kind": "INTERFACE",
+  "fieldBaseTypes": {
+    "alt": "String",
+    "mediaContentType": "MediaContentType"
+  },
+  "possibleTypes": ["ExternalVideo", "MediaImage", "Model3d", "Video"]
+};
+
+var MediaConnection = {
+  "name": "MediaConnection",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "edges": "MediaEdge",
+    "pageInfo": "PageInfo"
+  },
+  "implementsNode": false
+};
+
+var MediaContentType = {
+  "name": "MediaContentType",
+  "kind": "ENUM"
+};
+
+var MediaEdge = {
+  "name": "MediaEdge",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "cursor": "String",
+    "node": "Media"
+  },
+  "implementsNode": false
+};
+
+var MediaHost = {
+  "name": "MediaHost",
+  "kind": "ENUM"
 };
 
 var Metafield = {
@@ -9582,6 +9818,7 @@ var Product = {
     "handle": "String",
     "id": "ID",
     "images": "ImageConnection",
+    "media": "MediaConnection",
     "metafields": "MetafieldConnection",
     "onlineStoreUrl": "URL",
     "options": "ProductOption",
@@ -9826,6 +10063,7 @@ Types.types["DiscountApplicationTargetSelection"] = DiscountApplicationTargetSel
 Types.types["DiscountApplicationTargetType"] = DiscountApplicationTargetType;
 Types.types["DiscountCodeApplication"] = DiscountCodeApplication;
 Types.types["Domain"] = Domain;
+Types.types["ExternalVideo"] = ExternalVideo;
 Types.types["Float"] = Float;
 Types.types["HTML"] = HTML;
 Types.types["ID"] = ID;
@@ -9835,6 +10073,11 @@ Types.types["ImageEdge"] = ImageEdge;
 Types.types["Int"] = Int;
 Types.types["MailingAddress"] = MailingAddress;
 Types.types["ManualDiscountApplication"] = ManualDiscountApplication;
+Types.types["Media"] = Media;
+Types.types["MediaConnection"] = MediaConnection;
+Types.types["MediaContentType"] = MediaContentType;
+Types.types["MediaEdge"] = MediaEdge;
+Types.types["MediaHost"] = MediaHost;
 Types.types["Metafield"] = Metafield;
 Types.types["MetafieldConnection"] = MetafieldConnection;
 Types.types["MetafieldEdge"] = MetafieldEdge;

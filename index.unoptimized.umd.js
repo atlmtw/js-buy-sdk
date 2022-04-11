@@ -2526,6 +2526,29 @@ function query(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -2656,6 +2679,29 @@ function query$1(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -2792,6 +2838,29 @@ function query$2(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -2940,6 +3009,29 @@ function query$3(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -3070,6 +3162,29 @@ function query$4(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
@@ -3409,6 +3524,29 @@ function query$6(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -3627,6 +3765,29 @@ function query$8(client) {
         });
       });
     });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -3785,6 +3946,29 @@ function query$9(client) {
           node.add("altText");
           node.add("width");
           node.add("height");
+        });
+      });
+    });
+    root.add("media", {
+      args: {
+        first: 250
+      }
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      media.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
+          });
         });
       });
     });
