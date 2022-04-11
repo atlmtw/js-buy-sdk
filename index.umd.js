@@ -2302,7 +2302,7 @@ var Config = function () {
     if (attrs.hasOwnProperty('apiVersion')) {
       this.apiVersion = attrs.apiVersion;
     } else {
-      this.apiVersion = '2021-07';
+      this.apiVersion = '2022-04';
     }
 
     if (attrs.hasOwnProperty('source')) {
@@ -2436,28 +2436,6 @@ function query(client) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
     });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
-    });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
@@ -2590,28 +2568,6 @@ function query$1(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -2748,28 +2704,6 @@ function query$2(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -2916,28 +2850,6 @@ function query$3(client) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
     });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
-    });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
@@ -3052,6 +2964,139 @@ function query$3(client) {
       }
     }, function (productByHandle) {
       productByHandle.addFragment(spreads.ProductFragment);
+    });
+  });
+  return document;
+}
+
+function query$4(client) {
+  var document = client.document();
+  var spreads = {};
+  var variables = {};
+  variables.__defaultOperation__ = {};
+  variables.__defaultOperation__.productId = client.variable("productId", "ID!");
+  spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
+    root.add("id");
+    root.add("title");
+    root.add("price");
+    root.add("priceV2", function (priceV2) {
+      priceV2.add("amount");
+      priceV2.add("currencyCode");
+    });
+    root.add("weight");
+    root.add("availableForSale", {
+      alias: "available"
+    });
+    root.add("sku");
+    root.add("compareAtPrice");
+    root.add("compareAtPriceV2", function (compareAtPriceV2) {
+      compareAtPriceV2.add("amount");
+      compareAtPriceV2.add("currencyCode");
+    });
+    root.add("image", function (image) {
+      image.add("id");
+      image.add("originalSrc", {
+        alias: "src"
+      });
+      image.add("altText");
+      image.add("width");
+      image.add("height");
+    });
+    root.add("selectedOptions", function (selectedOptions) {
+      selectedOptions.add("name");
+      selectedOptions.add("value");
+    });
+    root.add("unitPrice", function (unitPrice) {
+      unitPrice.add("amount");
+      unitPrice.add("currencyCode");
+    });
+    root.add("unitPriceMeasurement", function (unitPriceMeasurement) {
+      unitPriceMeasurement.add("measuredType");
+      unitPriceMeasurement.add("quantityUnit");
+      unitPriceMeasurement.add("quantityValue");
+      unitPriceMeasurement.add("referenceUnit");
+      unitPriceMeasurement.add("referenceValue");
+    });
+  });
+  spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
+    root.add("id");
+    root.add("availableForSale");
+    root.add("createdAt");
+    root.add("updatedAt");
+    root.add("descriptionHtml");
+    root.add("description");
+    root.add("handle");
+    root.add("productType");
+    root.add("title");
+    root.add("vendor");
+    root.add("publishedAt");
+    root.add("onlineStoreUrl");
+    root.add("options", function (options) {
+      options.add("name");
+      options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        first: 5
+      }
+    }, function (metafields) {
+      metafields.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      metafields.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("key");
+          node.add("value");
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("src");
+          node.add("altText");
+          node.add("width");
+          node.add("height");
+        });
+      });
+    });
+    root.add("variants", {
+      args: {
+        first: 250
+      }
+    }, function (variants) {
+      variants.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      variants.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.VariantFragment);
+        });
+      });
+    });
+  });
+  document.addQuery([variables.__defaultOperation__.productId], function (root) {
+    root.add("productRecommendations", {
+      args: {
+        productId: variables.__defaultOperation__.productId
+      }
+    }, function (productRecommendations) {
+      productRecommendations.addFragment(spreads.ProductFragment);
     });
   });
   return document;
@@ -3182,6 +3227,26 @@ var ProductResource = function (_Resource) {
         reverse: reverse
       }).then(defaultResolver('products')).then(paginateProductConnectionsAndResolve(this.graphQLClient));
     }
+
+    /**
+     * Find recommended products related to a given productId.
+     * To learn more about how recommendations are generated, see https://shopify.dev/themes/product-merchandising/recommendations.
+     *
+     * @example
+     * const productId 'Xk9lM2JkNzFmNzIQ4NTIY4ZDFi9DaGVja291dC9lM2JkN==';
+     * client.product.fetchProductRecommendations(productId).then((products) => {
+     *   // Do something with the products
+     * });
+     *
+     * @param {String} productId The id of the product to fetch.
+     * @return {Promise|GraphModel[]} A promise resolving with an array of `GraphModel`s of the products.
+     */
+
+  }, {
+    key: 'fetchRecommendations',
+    value: function fetchRecommendations(productId) {
+      return this.graphQLClient.send(query$4, { productId: productId }).then(defaultResolver('productRecommendations')).then(paginateProductConnectionsAndResolve(this.graphQLClient));
+    }
   }, {
     key: 'helpers',
     get: function get$$1() {
@@ -3191,7 +3256,7 @@ var ProductResource = function (_Resource) {
   return ProductResource;
 }(Resource);
 
-function query$4(client) {
+function query$5(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -3224,7 +3289,7 @@ function query$4(client) {
   return document;
 }
 
-function query$5(client) {
+function query$6(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -3238,28 +3303,6 @@ function query$5(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -3413,7 +3456,7 @@ function query$5(client) {
   return document;
 }
 
-function query$6(client) {
+function query$7(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -3461,7 +3504,7 @@ function query$6(client) {
   return document;
 }
 
-function query$7(client) {
+function query$8(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -3478,28 +3521,6 @@ function query$7(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -3663,7 +3684,7 @@ function query$7(client) {
   return document;
 }
 
-function query$8(client) {
+function query$9(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -3676,28 +3697,6 @@ function query$8(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -3884,7 +3883,7 @@ var CollectionResource = function (_Resource) {
     value: function fetchAll() {
       var first = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
 
-      return this.graphQLClient.send(query$6, { first: first }).then(defaultResolver('collections'));
+      return this.graphQLClient.send(query$7, { first: first }).then(defaultResolver('collections'));
     }
 
     /**
@@ -3907,7 +3906,7 @@ var CollectionResource = function (_Resource) {
           _ref$productsFirst = _ref.productsFirst,
           productsFirst = _ref$productsFirst === undefined ? 20 : _ref$productsFirst;
 
-      return this.graphQLClient.send(query$7, { first: first, productsFirst: productsFirst }).then(defaultResolver('collections')).then(paginateCollectionsProductConnectionsAndResolve(this.graphQLClient));
+      return this.graphQLClient.send(query$8, { first: first, productsFirst: productsFirst }).then(defaultResolver('collections')).then(paginateCollectionsProductConnectionsAndResolve(this.graphQLClient));
     }
 
     /**
@@ -3926,7 +3925,7 @@ var CollectionResource = function (_Resource) {
   }, {
     key: 'fetch',
     value: function fetch(id) {
-      return this.graphQLClient.send(query$4, { id: id }).then(defaultResolver('node'));
+      return this.graphQLClient.send(query$5, { id: id }).then(defaultResolver('node'));
     }
 
     /**
@@ -3948,7 +3947,7 @@ var CollectionResource = function (_Resource) {
           _ref2$productsFirst = _ref2.productsFirst,
           productsFirst = _ref2$productsFirst === undefined ? 20 : _ref2$productsFirst;
 
-      return this.graphQLClient.send(query$5, { id: id, productsFirst: productsFirst }).then(defaultResolver('node')).then(paginateCollectionsProductConnectionsAndResolve(this.graphQLClient));
+      return this.graphQLClient.send(query$6, { id: id, productsFirst: productsFirst }).then(defaultResolver('node')).then(paginateCollectionsProductConnectionsAndResolve(this.graphQLClient));
     }
 
     /**
@@ -3966,7 +3965,7 @@ var CollectionResource = function (_Resource) {
   }, {
     key: 'fetchByHandle',
     value: function fetchByHandle(handle) {
-      return this.graphQLClient.send(query$8, { handle: handle }).then(defaultResolver('collectionByHandle'));
+      return this.graphQLClient.send(query$9, { handle: handle }).then(defaultResolver('collectionByHandle'));
     }
 
     /**
@@ -3997,7 +3996,7 @@ var CollectionResource = function (_Resource) {
           query = _ref3.query,
           reverse = _ref3.reverse;
 
-      return this.graphQLClient.send(query$6, {
+      return this.graphQLClient.send(query$7, {
         first: first,
         sortKey: sortKey,
         query: query,
@@ -4008,11 +4007,10 @@ var CollectionResource = function (_Resource) {
   return CollectionResource;
 }(Resource);
 
-function query$9(client) {
+function query$10(client) {
   var document = client.document();
   document.addQuery(function (root) {
     root.add("shop", function (shop) {
-      shop.add("currencyCode");
       shop.add("paymentSettings", function (paymentSettings) {
         paymentSettings.add("enabledPresentmentCurrencies");
       });
@@ -4029,7 +4027,7 @@ function query$9(client) {
   return document;
 }
 
-function query$10(client) {
+function query$11(client) {
   var document = client.document();
   var spreads = {};
   spreads.PolicyFragment = document.defineFragment("PolicyFragment", "ShopPolicy", function (root) {
@@ -4084,7 +4082,7 @@ var ShopResource = function (_Resource) {
      * @return {Promise|GraphModel} A promise resolving with a `GraphModel` of the shop.
      */
     value: function fetchInfo() {
-      return this.graphQLClient.send(query$9).then(defaultResolver('shop'));
+      return this.graphQLClient.send(query$10).then(defaultResolver('shop'));
     }
 
     /**
@@ -4101,7 +4099,7 @@ var ShopResource = function (_Resource) {
   }, {
     key: 'fetchPolicies',
     value: function fetchPolicies() {
-      return this.graphQLClient.send(query$10).then(defaultResolver('shop'));
+      return this.graphQLClient.send(query$11).then(defaultResolver('shop'));
     }
   }]);
   return ShopResource;
@@ -4144,7 +4142,7 @@ function handleCheckoutMutation(mutationRootKey, client) {
   };
 }
 
-function query$11(client) {
+function query$12(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -4157,28 +4155,6 @@ function query$11(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -4237,7 +4213,7 @@ function query$11(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -4486,7 +4462,7 @@ function query$11(client) {
   return document;
 }
 
-function query$12(client) {
+function query$13(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -4499,28 +4475,6 @@ function query$12(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -4579,7 +4533,7 @@ function query$12(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -4845,7 +4799,7 @@ function query$12(client) {
   return document;
 }
 
-function query$13(client) {
+function query$14(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -4859,28 +4813,6 @@ function query$13(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -4939,7 +4871,7 @@ function query$13(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -5206,7 +5138,7 @@ function query$13(client) {
   return document;
 }
 
-function query$14(client) {
+function query$15(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5220,28 +5152,6 @@ function query$14(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -5300,7 +5210,7 @@ function query$14(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -5567,7 +5477,7 @@ function query$14(client) {
   return document;
 }
 
-function query$15(client) {
+function query$16(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5581,28 +5491,6 @@ function query$15(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -5661,7 +5549,7 @@ function query$15(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -5921,7 +5809,7 @@ function query$15(client) {
   return document;
 }
 
-function query$16(client) {
+function query$17(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5935,28 +5823,6 @@ function query$16(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -6015,7 +5881,7 @@ function query$16(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -6282,7 +6148,7 @@ function query$16(client) {
   return document;
 }
 
-function query$17(client) {
+function query$18(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6296,28 +6162,6 @@ function query$17(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -6376,7 +6220,7 @@ function query$17(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -6643,7 +6487,7 @@ function query$17(client) {
   return document;
 }
 
-function query$18(client) {
+function query$19(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6657,28 +6501,6 @@ function query$18(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -6737,7 +6559,7 @@ function query$18(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -7004,7 +6826,7 @@ function query$18(client) {
   return document;
 }
 
-function query$19(client) {
+function query$20(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7017,28 +6839,6 @@ function query$19(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -7097,7 +6897,7 @@ function query$19(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -7363,7 +7163,7 @@ function query$19(client) {
   return document;
 }
 
-function query$20(client) {
+function query$21(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7377,28 +7177,6 @@ function query$20(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -7457,7 +7235,7 @@ function query$20(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -7724,7 +7502,7 @@ function query$20(client) {
   return document;
 }
 
-function query$21(client) {
+function query$22(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7738,28 +7516,6 @@ function query$21(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -7818,7 +7574,7 @@ function query$21(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -8085,7 +7841,7 @@ function query$21(client) {
   return document;
 }
 
-function query$22(client) {
+function query$23(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -8099,28 +7855,6 @@ function query$22(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -8179,7 +7913,7 @@ function query$22(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -8446,7 +8180,7 @@ function query$22(client) {
   return document;
 }
 
-function query$23(client) {
+function query$24(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -8460,28 +8194,6 @@ function query$23(client) {
     root.add("priceV2", function (priceV2) {
       priceV2.add("amount");
       priceV2.add("currencyCode");
-    });
-    root.add("presentmentPrices", {
-      args: {
-        first: 20
-      }
-    }, function (presentmentPrices) {
-      presentmentPrices.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      presentmentPrices.add("edges", function (edges) {
-        edges.add("node", function (node) {
-          node.add("price", function (price) {
-            price.add("amount");
-            price.add("currencyCode");
-          });
-          node.add("compareAtPrice", function (compareAtPrice) {
-            compareAtPrice.add("amount");
-            compareAtPrice.add("currencyCode");
-          });
-        });
-      });
     });
     root.add("weight");
     root.add("availableForSale", {
@@ -8540,7 +8252,7 @@ function query$23(client) {
       DiscountCodeApplication.add("applicable");
     });
     root.addInlineFragmentOn("ScriptDiscountApplication", function (ScriptDiscountApplication) {
-      ScriptDiscountApplication.add("description");
+      ScriptDiscountApplication.add("title");
     });
     root.addInlineFragmentOn("AutomaticDiscountApplication", function (AutomaticDiscountApplication) {
       AutomaticDiscountApplication.add("title");
@@ -8839,7 +8551,7 @@ var CheckoutResource = function (_Resource) {
     value: function fetch(id) {
       var _this2 = this;
 
-      return this.graphQLClient.send(query$11, { id: id }).then(defaultResolver('node')).then(function (checkout) {
+      return this.graphQLClient.send(query$12, { id: id }).then(defaultResolver('node')).then(function (checkout) {
         if (!checkout) {
           return null;
         }
@@ -8881,7 +8593,7 @@ var CheckoutResource = function (_Resource) {
     value: function create() {
       var input = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-      return this.graphQLClient.send(query$12, { input: input }).then(handleCheckoutMutation('checkoutCreate', this.graphQLClient));
+      return this.graphQLClient.send(query$13, { input: input }).then(handleCheckoutMutation('checkoutCreate', this.graphQLClient));
     }
 
     /**
@@ -8908,7 +8620,7 @@ var CheckoutResource = function (_Resource) {
     value: function updateAttributes(checkoutId) {
       var input = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-      return this.graphQLClient.send(query$17, { checkoutId: checkoutId, input: input }).then(handleCheckoutMutation('checkoutAttributesUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$18, { checkoutId: checkoutId, input: input }).then(handleCheckoutMutation('checkoutAttributesUpdateV2', this.graphQLClient));
     }
 
     /**
@@ -8930,7 +8642,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateEmail',
     value: function updateEmail(checkoutId, email) {
-      return this.graphQLClient.send(query$22, { checkoutId: checkoutId, email: email }).then(handleCheckoutMutation('checkoutEmailUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$23, { checkoutId: checkoutId, email: email }).then(handleCheckoutMutation('checkoutEmailUpdateV2', this.graphQLClient));
     }
 
     /**
@@ -8952,7 +8664,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addLineItems',
     value: function addLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$13, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsAdd', this.graphQLClient));
+      return this.graphQLClient.send(query$14, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsAdd', this.graphQLClient));
     }
 
     /**
@@ -8974,7 +8686,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addDiscount',
     value: function addDiscount(checkoutId, discountCode) {
-      return this.graphQLClient.send(query$18, { checkoutId: checkoutId, discountCode: discountCode }).then(handleCheckoutMutation('checkoutDiscountCodeApplyV2', this.graphQLClient));
+      return this.graphQLClient.send(query$19, { checkoutId: checkoutId, discountCode: discountCode }).then(handleCheckoutMutation('checkoutDiscountCodeApplyV2', this.graphQLClient));
     }
 
     /**
@@ -8994,7 +8706,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeDiscount',
     value: function removeDiscount(checkoutId) {
-      return this.graphQLClient.send(query$19, { checkoutId: checkoutId }).then(handleCheckoutMutation('checkoutDiscountCodeRemove', this.graphQLClient));
+      return this.graphQLClient.send(query$20, { checkoutId: checkoutId }).then(handleCheckoutMutation('checkoutDiscountCodeRemove', this.graphQLClient));
     }
 
     /**
@@ -9016,7 +8728,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addGiftCards',
     value: function addGiftCards(checkoutId, giftCardCodes) {
-      return this.graphQLClient.send(query$20, { checkoutId: checkoutId, giftCardCodes: giftCardCodes }).then(handleCheckoutMutation('checkoutGiftCardsAppend', this.graphQLClient));
+      return this.graphQLClient.send(query$21, { checkoutId: checkoutId, giftCardCodes: giftCardCodes }).then(handleCheckoutMutation('checkoutGiftCardsAppend', this.graphQLClient));
     }
 
     /**
@@ -9038,7 +8750,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeGiftCard',
     value: function removeGiftCard(checkoutId, appliedGiftCardId) {
-      return this.graphQLClient.send(query$21, { checkoutId: checkoutId, appliedGiftCardId: appliedGiftCardId }).then(handleCheckoutMutation('checkoutGiftCardRemoveV2', this.graphQLClient));
+      return this.graphQLClient.send(query$22, { checkoutId: checkoutId, appliedGiftCardId: appliedGiftCardId }).then(handleCheckoutMutation('checkoutGiftCardRemoveV2', this.graphQLClient));
     }
 
     /**
@@ -9060,7 +8772,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeLineItems',
     value: function removeLineItems(checkoutId, lineItemIds) {
-      return this.graphQLClient.send(query$14, { checkoutId: checkoutId, lineItemIds: lineItemIds }).then(handleCheckoutMutation('checkoutLineItemsRemove', this.graphQLClient));
+      return this.graphQLClient.send(query$15, { checkoutId: checkoutId, lineItemIds: lineItemIds }).then(handleCheckoutMutation('checkoutLineItemsRemove', this.graphQLClient));
     }
 
     /**
@@ -9082,7 +8794,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'replaceLineItems',
     value: function replaceLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$15, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsReplace', this.graphQLClient));
+      return this.graphQLClient.send(query$16, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsReplace', this.graphQLClient));
     }
 
     /**
@@ -9110,7 +8822,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateLineItems',
     value: function updateLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$16, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsUpdate', this.graphQLClient));
+      return this.graphQLClient.send(query$17, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsUpdate', this.graphQLClient));
     }
 
     /**
@@ -9143,7 +8855,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateShippingAddress',
     value: function updateShippingAddress(checkoutId, shippingAddress) {
-      return this.graphQLClient.send(query$23, { checkoutId: checkoutId, shippingAddress: shippingAddress }).then(handleCheckoutMutation('checkoutShippingAddressUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$24, { checkoutId: checkoutId, shippingAddress: shippingAddress }).then(handleCheckoutMutation('checkoutShippingAddressUpdateV2', this.graphQLClient));
     }
   }]);
   return CheckoutResource;
@@ -9211,7 +8923,7 @@ var ImageResource = function (_Resource) {
   return ImageResource;
 }(Resource);
 
-var version = "2.12.0";
+var version = "2.15.1";
 
 var AppliedGiftCard = {
   "name": "AppliedGiftCard",
@@ -9755,6 +9467,7 @@ var Mutation$1 = {
   },
   "implementsNode": false,
   "relayInputObjectBaseTypes": {
+    "cartCreate": "CartInput",
     "checkoutAttributesUpdate": "CheckoutAttributesUpdateInput",
     "checkoutAttributesUpdateV2": "CheckoutAttributesUpdateV2Input",
     "checkoutCreate": "CheckoutCreateInput",
@@ -9769,7 +9482,7 @@ var Node = {
   "name": "Node",
   "kind": "INTERFACE",
   "fieldBaseTypes": {},
-  "possibleTypes": ["AppliedGiftCard", "Article", "Blog", "Checkout", "CheckoutLineItem", "Collection", "Comment", "ExternalVideo", "Location", "MailingAddress", "MediaImage", "Metafield", "Model3d", "Order", "Page", "Payment", "Product", "ProductOption", "ProductVariant", "ShopPolicy", "Video"]
+  "possibleTypes": ["AppliedGiftCard", "Article", "Blog", "Cart", "CartLine", "Checkout", "CheckoutLineItem", "Collection", "Comment", "ExternalVideo", "GenericFile", "Location", "MailingAddress", "MediaImage", "Menu", "MenuItem", "Metafield", "Model3d", "Order", "Page", "Payment", "Product", "ProductOption", "ProductVariant", "Shop", "ShopPolicy", "Video"]
 };
 
 var Order = {
@@ -9925,7 +9638,6 @@ var ProductVariant = {
     "compareAtPriceV2": "MoneyV2",
     "id": "ID",
     "image": "Image",
-    "presentmentPrices": "ProductVariantPricePairConnection",
     "price": "Money",
     "priceV2": "MoneyV2",
     "product": "Product",
@@ -9959,35 +9671,6 @@ var ProductVariantEdge = {
   "implementsNode": false
 };
 
-var ProductVariantPricePair = {
-  "name": "ProductVariantPricePair",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "compareAtPrice": "MoneyV2",
-    "price": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var ProductVariantPricePairConnection = {
-  "name": "ProductVariantPricePairConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "ProductVariantPricePairEdge",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var ProductVariantPricePairEdge = {
-  "name": "ProductVariantPricePairEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "node": "ProductVariantPricePair"
-  },
-  "implementsNode": false
-};
-
 var QueryRoot = {
   "name": "QueryRoot",
   "kind": "OBJECT",
@@ -9997,6 +9680,7 @@ var QueryRoot = {
     "node": "Node",
     "nodes": "Node",
     "productByHandle": "Product",
+    "productRecommendations": "Product",
     "products": "ProductConnection",
     "shop": "Shop"
   },
@@ -10007,7 +9691,7 @@ var ScriptDiscountApplication = {
   "name": "ScriptDiscountApplication",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "description": "String"
+    "title": "String"
   },
   "implementsNode": false
 };
@@ -10038,7 +9722,6 @@ var Shop = {
   "name": "Shop",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "currencyCode": "CurrencyCode",
     "description": "String",
     "moneyFormat": "String",
     "name": "String",
@@ -10048,7 +9731,7 @@ var Shop = {
     "refundPolicy": "ShopPolicy",
     "termsOfService": "ShopPolicy"
   },
-  "implementsNode": false
+  "implementsNode": true
 };
 
 var ShopPolicy = {
@@ -10178,9 +9861,6 @@ Types.types["ProductOption"] = ProductOption;
 Types.types["ProductVariant"] = ProductVariant;
 Types.types["ProductVariantConnection"] = ProductVariantConnection;
 Types.types["ProductVariantEdge"] = ProductVariantEdge;
-Types.types["ProductVariantPricePair"] = ProductVariantPricePair;
-Types.types["ProductVariantPricePairConnection"] = ProductVariantPricePairConnection;
-Types.types["ProductVariantPricePairEdge"] = ProductVariantPricePairEdge;
 Types.types["QueryRoot"] = QueryRoot;
 Types.types["ScriptDiscountApplication"] = ScriptDiscountApplication;
 Types.types["SelectedOption"] = SelectedOption;
