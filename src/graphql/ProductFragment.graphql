@@ -55,6 +55,17 @@ fragment ProductFragment on Product {
       node {
         alt
         mediaContentType
+        ... on MediaImage {
+          alt
+          id
+          image {
+            id
+            src
+            altText
+            width
+            height
+          }
+        }
         ... on ExternalVideo {
           id
           host

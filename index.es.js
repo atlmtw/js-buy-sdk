@@ -2534,6 +2534,17 @@ function query(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -2690,6 +2701,17 @@ function query$1(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -2849,6 +2871,17 @@ function query$2(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3017,6 +3050,17 @@ function query$3(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3173,6 +3217,17 @@ function query$4(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3532,6 +3587,17 @@ function query$6(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3773,6 +3839,17 @@ function query$8(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3957,6 +4034,17 @@ function query$9(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.add("id");
+              image.add("src");
+              image.add("altText");
+              image.add("width");
+              image.add("height");
+            });
+          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -9632,6 +9720,17 @@ var MediaHost = {
   "kind": "ENUM"
 };
 
+var MediaImage = {
+  "name": "MediaImage",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "alt": "String",
+    "id": "ID",
+    "image": "Image"
+  },
+  "implementsNode": true
+};
+
 var Metafield = {
   "name": "Metafield",
   "kind": "OBJECT",
@@ -10076,6 +10175,7 @@ Types.types["MediaConnection"] = MediaConnection;
 Types.types["MediaContentType"] = MediaContentType;
 Types.types["MediaEdge"] = MediaEdge;
 Types.types["MediaHost"] = MediaHost;
+Types.types["MediaImage"] = MediaImage;
 Types.types["Metafield"] = Metafield;
 Types.types["MetafieldConnection"] = MetafieldConnection;
 Types.types["MetafieldEdge"] = MetafieldEdge;
