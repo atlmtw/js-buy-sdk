@@ -2534,13 +2534,6 @@ function query(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -2697,13 +2690,6 @@ function query$1(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -2863,13 +2849,6 @@ function query$2(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3038,13 +3017,6 @@ function query$3(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3201,13 +3173,6 @@ function query$4(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3567,13 +3532,6 @@ function query$6(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -3815,13 +3773,6 @@ function query$8(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
@@ -4006,13 +3957,6 @@ function query$9(client) {
         edges.add("node", function (node) {
           node.add("alt");
           node.add("mediaContentType");
-          node.addInlineFragmentOn("Image", function (Image) {
-            Image.add("id");
-            Image.add("src");
-            Image.add("altText");
-            Image.add("width");
-            Image.add("height");
-          });
           node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
             ExternalVideo.add("id");
             ExternalVideo.add("host");
