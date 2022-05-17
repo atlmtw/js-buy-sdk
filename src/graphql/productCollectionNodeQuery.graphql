@@ -1,0 +1,27 @@
+query($handle: String!, $first: Int!, $cursor: String) {
+  collectionByHandle(handle: $handle) {
+        id
+        handle
+        description
+        descriptionHtml
+        updatedAt
+        title
+        image {
+            id
+            src: originalSrc
+            altText
+        }
+        products(first: $first, after: $cursor) {
+            pageInfo {
+                hasNextPage
+                hasPreviousPage
+            },
+             edges {
+                cursor
+                node {
+                ...ProductFragment
+                }
+            }
+        }
+  }
+}

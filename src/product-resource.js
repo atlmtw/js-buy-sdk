@@ -4,6 +4,7 @@ import {paginateProductConnectionsAndResolve} from './paginators';
 import productHelpers from './product-helpers';
 
 // GraphQL
+import productCollectionNodeQuery from './graphql/productCollectionNodeQuery.graphql';
 import productNodeQuery from './graphql/productNodeQuery.graphql';
 import productNodesQuery from './graphql/productNodesQuery.graphql';
 import productConnectionQuery from './graphql/productConnectionQuery.graphql';
@@ -35,6 +36,17 @@ class ProductResource extends Resource {
       .send(productConnectionQuery, {first})
       .then(defaultResolver('products'))
       .then(paginateProductConnectionsAndResolve(this.graphQLClient));
+  }
+
+  /**
+   * 
+   * @param {Cursor} cursor the current cursor used to keep track of pagination 
+   * @param {*} first for pagination on how many items per query
+   */
+  fetchProgressive(handle,first,cursor) {
+    return this.graphQLClient
+      .send(productCollectionNodeQuery, {handle,cursor,first});
+      // .then(defaultResolver('collectionByHandle'));
   }
 
   /**

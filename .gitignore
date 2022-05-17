@@ -10,6 +10,7 @@ node_modules
 .tmp
 types.js
 optimized-types.js
+test-client.js
 
 # Build artifacts
 # index.*
