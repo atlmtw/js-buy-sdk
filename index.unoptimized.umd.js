@@ -2430,6 +2430,8 @@ function query(client) {
   variables.__defaultOperation__.handle = client.variable("handle", "String!");
   variables.__defaultOperation__.first = client.variable("first", "Int!");
   variables.__defaultOperation__.cursor = client.variable("cursor", "String");
+  variables.__defaultOperation__.sortKey = client.variable("sortKey", "ProductCollectionSortKeys");
+  variables.__defaultOperation__.reverse = client.variable("reverse", "Boolean");
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -2579,7 +2581,7 @@ function query(client) {
       });
     });
   });
-  document.addQuery([variables.__defaultOperation__.handle, variables.__defaultOperation__.first, variables.__defaultOperation__.cursor], function (root) {
+  document.addQuery([variables.__defaultOperation__.handle, variables.__defaultOperation__.first, variables.__defaultOperation__.cursor, variables.__defaultOperation__.sortKey, variables.__defaultOperation__.reverse], function (root) {
     root.add("collectionByHandle", {
       args: {
         handle: variables.__defaultOperation__.handle
@@ -2601,7 +2603,9 @@ function query(client) {
       collectionByHandle.add("products", {
         args: {
           first: variables.__defaultOperation__.first,
-          after: variables.__defaultOperation__.cursor
+          after: variables.__defaultOperation__.cursor,
+          sortKey: variables.__defaultOperation__.sortKey,
+          reverse: variables.__defaultOperation__.reverse
         }
       }, function (products) {
         products.add("pageInfo", function (pageInfo) {
@@ -3513,8 +3517,8 @@ var ProductResource = function (_Resource) {
 
   }, {
     key: 'fetchProgressive',
-    value: function fetchProgressive(handle, first, cursor) {
-      return this.graphQLClient.send(query, { handle: handle, first: first, cursor: cursor || null });
+    value: function fetchProgressive(handle, first, cursor, sortKey, reverse) {
+      return this.graphQLClient.send(query, { handle: handle, first: first, cursor: cursor || null, sortKey: sortKey, reverse: reverse });
       // .then(defaultResolver('collectionByHandle'));
     }
 
