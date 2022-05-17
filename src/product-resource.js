@@ -45,7 +45,7 @@ class ProductResource extends Resource {
    */
   fetchProgressive(handle,first,cursor) {
     return this.graphQLClient
-      .send(productCollectionNodeQuery, {handle,cursor,first});
+      .send(productCollectionNodeQuery, {handle,first,cursor: cursor || null});
       // .then(defaultResolver('collectionByHandle'));
   }
 

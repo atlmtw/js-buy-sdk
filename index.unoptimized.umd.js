@@ -3514,7 +3514,7 @@ var ProductResource = function (_Resource) {
   }, {
     key: 'fetchProgressive',
     value: function fetchProgressive(handle, first, cursor) {
-      return this.graphQLClient.send(query, { handle: handle, cursor: cursor, first: first });
+      return this.graphQLClient.send(query, { handle: handle, first: first, cursor: cursor || null });
       // .then(defaultResolver('collectionByHandle'));
     }
 
