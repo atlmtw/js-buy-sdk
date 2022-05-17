@@ -1,4 +1,4 @@
-query($handle: String!, $first: Int!, $cursor: String) {
+query($handle: String!, $first: Int!, $cursor: String, $sortKey: ProductCollectionSortKeys, $reverse: Boolean) {
   collectionByHandle(handle: $handle) {
         id
         handle
@@ -11,7 +11,7 @@ query($handle: String!, $first: Int!, $cursor: String) {
             src: originalSrc
             altText
         }
-        products(first: $first, after: $cursor) {
+        products(first: $first, after: $cursor, sortKey: $sortKey, reverse: $reverse) {
             pageInfo {
                 hasNextPage
                 hasPreviousPage

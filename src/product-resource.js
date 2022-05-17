@@ -43,9 +43,9 @@ class ProductResource extends Resource {
    * @param {Cursor} cursor the current cursor used to keep track of pagination 
    * @param {*} first for pagination on how many items per query
    */
-  fetchProgressive(handle,first,cursor) {
+  fetchProgressive(handle,first,cursor,sortKey,reverse) {
     return this.graphQLClient
-      .send(productCollectionNodeQuery, {handle,first,cursor: cursor || null});
+      .send(productCollectionNodeQuery, {handle,first,cursor: cursor || null,sortKey,reverse});
       // .then(defaultResolver('collectionByHandle'));
   }
 
