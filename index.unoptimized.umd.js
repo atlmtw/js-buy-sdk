@@ -2507,7 +2507,7 @@ function query(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -2515,7 +2515,7 @@ function query(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -2523,7 +2523,7 @@ function query(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -2531,7 +2531,7 @@ function query(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -2685,7 +2685,7 @@ function query$1(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -2693,7 +2693,7 @@ function query$1(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -2701,7 +2701,7 @@ function query$1(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -2709,7 +2709,7 @@ function query$1(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -2832,7 +2832,7 @@ function query$2(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -2840,7 +2840,7 @@ function query$2(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -2848,7 +2848,7 @@ function query$2(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -2856,7 +2856,7 @@ function query$2(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -2982,7 +2982,7 @@ function query$3(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -2990,7 +2990,7 @@ function query$3(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -2998,7 +2998,7 @@ function query$3(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -3006,7 +3006,7 @@ function query$3(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -3141,7 +3141,7 @@ function query$4(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -3149,7 +3149,7 @@ function query$4(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -3157,7 +3157,7 @@ function query$4(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -3165,7 +3165,7 @@ function query$4(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -3288,7 +3288,7 @@ function query$5(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -3296,7 +3296,7 @@ function query$5(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -3304,7 +3304,7 @@ function query$5(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -3312,7 +3312,7 @@ function query$5(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -3651,7 +3651,7 @@ function query$7(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -3659,7 +3659,7 @@ function query$7(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -3667,7 +3667,7 @@ function query$7(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -3675,7 +3675,7 @@ function query$7(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -3883,7 +3883,7 @@ function query$9(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -3891,7 +3891,7 @@ function query$9(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -3899,7 +3899,7 @@ function query$9(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -3907,7 +3907,7 @@ function query$9(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
@@ -4058,7 +4058,7 @@ function query$10(client) {
           node.add("id");
           node.add("url");
           node.add("url", {
-            alias: "url_small",
+            alias: "url_small_600",
             args: {
               transform: {
                 maxWidth: 600
@@ -4066,7 +4066,7 @@ function query$10(client) {
             }
           });
           node.add("url", {
-            alias: "url_medium",
+            alias: "url_medium_960",
             args: {
               transform: {
                 maxWidth: 960
@@ -4074,7 +4074,7 @@ function query$10(client) {
             }
           });
           node.add("url", {
-            alias: "url_large",
+            alias: "url_large_1200",
             args: {
               transform: {
                 maxWidth: 1200
@@ -4082,7 +4082,7 @@ function query$10(client) {
             }
           });
           node.add("url", {
-            alias: "url_xlarge",
+            alias: "url_xlarge_1920",
             args: {
               transform: {
                 maxWidth: 1920
