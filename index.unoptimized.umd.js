@@ -2492,24 +2492,6 @@ function query(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -2523,44 +2505,42 @@ function query(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -2690,24 +2670,6 @@ function query$1(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -2721,44 +2683,42 @@ function query$1(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -2857,24 +2817,6 @@ function query$2(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -2888,44 +2830,42 @@ function query$2(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -3027,24 +2967,6 @@ function query$3(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -3058,44 +2980,42 @@ function query$3(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -3206,24 +3126,6 @@ function query$4(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -3237,44 +3139,42 @@ function query$4(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -3373,24 +3273,6 @@ function query$5(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -3404,44 +3286,42 @@ function query$5(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -3756,24 +3636,6 @@ function query$7(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -3787,44 +3649,42 @@ function query$7(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -4008,24 +3868,6 @@ function query$9(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -4039,44 +3881,42 @@ function query$9(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
@@ -4203,24 +4043,6 @@ function query$10(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
-      args: {
-        first: 5
-      }
-    }, function (metafields) {
-      metafields.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      metafields.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("id");
-          node.add("key");
-          node.add("value");
-        });
-      });
-    });
     root.add("images", {
       args: {
         first: 250
@@ -4234,44 +4056,42 @@ function query$10(client) {
         edges.add("cursor");
         edges.add("node", function (node) {
           node.add("id");
-          node.add("src");
+          node.add("url");
+          node.add("url", {
+            alias: "url_small",
+            args: {
+              transform: {
+                maxWidth: 600
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_medium",
+            args: {
+              transform: {
+                maxWidth: 960
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_large",
+            args: {
+              transform: {
+                maxWidth: 1200
+              }
+            }
+          });
+          node.add("url", {
+            alias: "url_xlarge",
+            args: {
+              transform: {
+                maxWidth: 1920
+              }
+            }
+          });
           node.add("altText");
           node.add("width");
           node.add("height");
-        });
-      });
-    });
-    root.add("media", {
-      args: {
-        first: 250
-      }
-    }, function (media) {
-      media.add("pageInfo", function (pageInfo) {
-        pageInfo.add("hasNextPage");
-        pageInfo.add("hasPreviousPage");
-      });
-      media.add("edges", function (edges) {
-        edges.add("cursor");
-        edges.add("node", function (node) {
-          node.add("alt");
-          node.add("mediaContentType");
-          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
-            MediaImage.add("alt");
-            MediaImage.add("id");
-            MediaImage.add("image", function (image) {
-              image.add("id");
-              image.add("src");
-              image.add("altText");
-              image.add("width");
-              image.add("height");
-            });
-          });
-          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
-            ExternalVideo.add("id");
-            ExternalVideo.add("host");
-            ExternalVideo.add("originUrl");
-            ExternalVideo.add("embedUrl");
-          });
         });
       });
     });
