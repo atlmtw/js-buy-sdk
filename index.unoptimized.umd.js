@@ -2475,6 +2475,53 @@ function query(client) {
       unitPriceMeasurement.add("referenceValue");
     });
   });
+  spreads.CollectionFragment = document.defineFragment("CollectionFragment", "Collection", function (root) {
+    root.add("id");
+    root.add("handle");
+    root.add("description");
+    root.add("descriptionHtml");
+    root.add("updatedAt");
+    root.add("title");
+    root.add("image", function (image) {
+      image.add("id");
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
+      });
+      image.add("altText");
+      image.add("width");
+      image.add("height");
+    });
+  });
   spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
     root.add("id");
     root.add("availableForSale");
@@ -2567,19 +2614,7 @@ function query(client) {
         handle: variables.__defaultOperation__.handle
       }
     }, function (collectionByHandle) {
-      collectionByHandle.add("id");
-      collectionByHandle.add("handle");
-      collectionByHandle.add("description");
-      collectionByHandle.add("descriptionHtml");
-      collectionByHandle.add("updatedAt");
-      collectionByHandle.add("title");
-      collectionByHandle.add("image", function (image) {
-        image.add("id");
-        image.add("originalSrc", {
-          alias: "src"
-        });
-        image.add("altText");
-      });
+      collectionByHandle.addFragment(spreads.CollectionFragment);
       collectionByHandle.add("products", {
         args: {
           first: variables.__defaultOperation__.first,
@@ -3536,10 +3571,42 @@ function query$6(client) {
     root.add("title");
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
+      image.add("width");
+      image.add("height");
     });
   });
   document.addQuery([variables.__defaultOperation__.id], function (root) {
@@ -3613,10 +3680,42 @@ function query$7(client) {
     root.add("title");
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
+      image.add("width");
+      image.add("height");
     });
   });
   spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
@@ -3753,10 +3852,42 @@ function query$8(client) {
     root.add("title");
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
+      image.add("width");
+      image.add("height");
     });
   });
   document.addQuery([variables.__defaultOperation__.first, variables.__defaultOperation__.query, variables.__defaultOperation__.sortKey, variables.__defaultOperation__.reverse], function (root) {
@@ -3845,10 +3976,42 @@ function query$9(client) {
     root.add("title");
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
+      image.add("width");
+      image.add("height");
     });
   });
   spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
@@ -4121,10 +4284,42 @@ function query$10(client) {
     root.add("title");
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
+      image.add("width");
+      image.add("height");
     });
   });
   spreads.CollectionsProductsFragment = document.defineFragment("CollectionsProductsFragment", "Collection", function (root) {

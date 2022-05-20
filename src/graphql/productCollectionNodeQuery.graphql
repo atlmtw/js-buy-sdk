@@ -1,16 +1,6 @@
 query($handle: String!, $first: Int!, $cursor: String, $sortKey: ProductCollectionSortKeys, $reverse: Boolean) {
   collectionByHandle(handle: $handle) {
-        id
-        handle
-        description
-        descriptionHtml
-        updatedAt
-        title
-        image {
-            id
-            src: originalSrc
-            altText
-        }
+        ...CollectionFragment
         products(first: $first, after: $cursor, sortKey: $sortKey, reverse: $reverse) {
             pageInfo {
                 hasNextPage
