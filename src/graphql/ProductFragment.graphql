@@ -15,11 +15,20 @@ fragment ProductFragment on Product {
   options {
     name
     values
-  },
+  }
   collections(first: 10) {
-    id
-    title
-    handle
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      cursor
+      node {
+        id
+        title
+        handle
+      }
+    }
   }
   # metafields(first: 5) {
   #   pageInfo {

@@ -2545,9 +2545,18 @@ function query(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -2721,9 +2730,18 @@ function query$1(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -2878,9 +2896,18 @@ function query$2(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -3038,9 +3065,18 @@ function query$3(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -3207,9 +3243,18 @@ function query$4(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -3364,9 +3409,18 @@ function query$5(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -3801,9 +3855,18 @@ function query$7(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -4107,9 +4170,18 @@ function query$9(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
@@ -4292,9 +4364,18 @@ function query$10(client) {
         first: 10
       }
     }, function (collections) {
-      collections.add("id");
-      collections.add("title");
-      collections.add("handle");
+      collections.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      collections.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.add("id");
+          node.add("title");
+          node.add("handle");
+        });
+      });
     });
     root.add("images", {
       args: {
