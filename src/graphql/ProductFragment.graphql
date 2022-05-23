@@ -7,6 +7,7 @@ fragment ProductFragment on Product {
   description
   handle
   productType
+  tags
   title
   vendor
   publishedAt
@@ -14,6 +15,11 @@ fragment ProductFragment on Product {
   options {
     name
     values
+  },
+  collections(first: 10) {
+    id
+    title
+    handle
   }
   # metafields(first: 5) {
   #   pageInfo {
