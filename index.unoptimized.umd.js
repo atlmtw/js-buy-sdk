@@ -2531,6 +2531,7 @@ function query(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -2538,6 +2539,15 @@ function query(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -2697,6 +2707,7 @@ function query$1(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -2704,6 +2715,15 @@ function query$1(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -2844,6 +2864,7 @@ function query$2(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -2851,6 +2872,15 @@ function query$2(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -2994,6 +3024,7 @@ function query$3(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -3001,6 +3032,15 @@ function query$3(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -3153,6 +3193,7 @@ function query$4(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -3160,6 +3201,15 @@ function query$4(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -3300,6 +3350,7 @@ function query$5(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -3307,6 +3358,15 @@ function query$5(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -3727,6 +3787,7 @@ function query$7(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -3734,6 +3795,15 @@ function query$7(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -4023,6 +4093,7 @@ function query$9(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -4030,6 +4101,15 @@ function query$9(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
@@ -4198,6 +4278,7 @@ function query$10(client) {
     root.add("description");
     root.add("handle");
     root.add("productType");
+    root.add("tags");
     root.add("title");
     root.add("vendor");
     root.add("publishedAt");
@@ -4205,6 +4286,15 @@ function query$10(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("collections", {
+      args: {
+        first: 10
+      }
+    }, function (collections) {
+      collections.add("id");
+      collections.add("title");
+      collections.add("handle");
     });
     root.add("images", {
       args: {
