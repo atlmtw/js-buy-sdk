@@ -12,7 +12,6 @@ fragment ProductFragment on Product {
   vendor
   publishedAt
   onlineStoreUrl
-  variantBySelectedOptions
   options {
     name
     values
