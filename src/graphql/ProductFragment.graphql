@@ -12,6 +12,7 @@ fragment ProductFragment on Product {
   vendor
   publishedAt
   onlineStoreUrl
+  variantBySelectedOptions
   options {
     name
     values
@@ -30,20 +31,6 @@ fragment ProductFragment on Product {
       }
     }
   }
-  # metafields(first: 5) {
-  #   pageInfo {
-  #     hasNextPage
-  #     hasPreviousPage
-  #   }
-  #   edges {
-  #     cursor
-  #     node {
-  #       id
-  #       key
-  #       value
-  #     }
-  #   }
-  # }
   images(first: 250) {
     pageInfo {
       hasNextPage
@@ -64,36 +51,6 @@ fragment ProductFragment on Product {
       }
     }
   }
-  # media(first: 250) {
-  #   pageInfo {
-  #     hasNextPage
-  #     hasPreviousPage
-  #   }
-  #   edges {
-  #     cursor
-  #     node {
-  #       alt
-  #       mediaContentType
-  #       ... on MediaImage {
-  #         alt
-  #         id
-  #         image {
-  #           id
-  #           src
-  #           altText
-  #           width
-  #           height
-  #         }
-  #       }
-  #       ... on ExternalVideo {
-  #         id
-  #         host
-  #         originUrl
-  #         embedUrl
-  #       }
-  #     }
-  #   }
-  # }
   variants(first: 250) {
     pageInfo {
       hasNextPage

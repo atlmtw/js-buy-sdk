@@ -2536,6 +2536,7 @@ function query(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -2721,6 +2722,7 @@ function query$1(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -2887,6 +2889,7 @@ function query$2(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -3056,6 +3059,7 @@ function query$3(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -3234,6 +3238,7 @@ function query$4(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -3400,6 +3405,7 @@ function query$5(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -3846,6 +3852,7 @@ function query$7(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -4161,6 +4168,7 @@ function query$9(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
@@ -4355,6 +4363,7 @@ function query$10(client) {
     root.add("vendor");
     root.add("publishedAt");
     root.add("onlineStoreUrl");
+    root.add("variantBySelectedOptions");
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
