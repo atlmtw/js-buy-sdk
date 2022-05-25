@@ -2452,8 +2452,38 @@ function query(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -2684,8 +2714,38 @@ function query$1(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -2850,8 +2910,38 @@ function query$2(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -3019,8 +3109,38 @@ function query$3(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -3197,8 +3317,38 @@ function query$4(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -3363,8 +3513,38 @@ function query$5(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -3762,8 +3942,38 @@ function query$7(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -4077,8 +4287,38 @@ function query$9(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -4318,8 +4558,38 @@ function query$10(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -4841,8 +5111,38 @@ function query$13(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -5161,8 +5461,38 @@ function query$14(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -5499,8 +5829,38 @@ function query$15(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -5838,8 +6198,38 @@ function query$16(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -6177,8 +6567,38 @@ function query$17(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -6509,8 +6929,38 @@ function query$18(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -6848,8 +7298,38 @@ function query$19(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -7187,8 +7667,38 @@ function query$20(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -7525,8 +8035,38 @@ function query$21(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -7863,8 +8403,38 @@ function query$22(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -8202,8 +8772,38 @@ function query$23(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -8541,8 +9141,38 @@ function query$24(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
@@ -8880,8 +9510,38 @@ function query$25(client) {
     });
     root.add("image", function (image) {
       image.add("id");
-      image.add("originalSrc", {
-        alias: "src"
+      image.add("url");
+      image.add("url", {
+        alias: "url_small_600",
+        args: {
+          transform: {
+            maxWidth: 600
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_medium_960",
+        args: {
+          transform: {
+            maxWidth: 960
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_large_1200",
+        args: {
+          transform: {
+            maxWidth: 1200
+          }
+        }
+      });
+      image.add("url", {
+        alias: "url_xlarge_1920",
+        args: {
+          transform: {
+            maxWidth: 1920
+          }
+        }
       });
       image.add("altText");
       image.add("width");
