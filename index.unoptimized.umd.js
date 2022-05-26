@@ -5012,7 +5012,6 @@ function query$13(client) {
         });
         availableCountries.add("isoCode");
         availableCountries.add("name");
-        availableCountries.add("unitSystem");
       });
     });
   });
