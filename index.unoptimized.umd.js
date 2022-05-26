@@ -4995,6 +4995,30 @@ function query$12(client) {
   return document;
 }
 
+function query$13(client) {
+  var document = client.document();
+  document.addQuery(function (root) {
+    root.add("localization", function (localization) {
+      localization.add("availableLanguages", function (availableLanguages) {
+        availableLanguages.add("endonymName");
+        availableLanguages.add("isoCode");
+        availableLanguages.add("name");
+      });
+      localization.add("availableCountries", function (availableCountries) {
+        availableCountries.add("currency", function (currency) {
+          currency.add("isoCode");
+          currency.add("name");
+          currency.add("symbol");
+        });
+        availableCountries.add("isoCode");
+        availableCountries.add("name");
+        availableCountries.add("unitSystem");
+      });
+    });
+  });
+  return document;
+}
+
 // GraphQL
 /**
  * The JS Buy SDK shop resource
@@ -5026,6 +5050,17 @@ var ShopResource = function (_Resource) {
      */
     value: function fetchInfo() {
       return this.graphQLClient.send(query$11).then(defaultResolver('shop'));
+    }
+
+    /**
+     * 
+     * @returns a list of available countries that the store has enabled
+     */
+
+  }, {
+    key: 'fetchCountries',
+    value: function fetchCountries() {
+      return this.graphQLClient.send(query$13).then(defaultResolver('localization'));
     }
 
     /**
@@ -5085,7 +5120,7 @@ function handleCheckoutMutation(mutationRootKey, client) {
   };
 }
 
-function query$13(client) {
+function query$14(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5435,7 +5470,7 @@ function query$13(client) {
   return document;
 }
 
-function query$14(client) {
+function query$15(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5802,7 +5837,7 @@ function query$14(client) {
   return document;
 }
 
-function query$15(client) {
+function query$16(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6171,7 +6206,7 @@ function query$15(client) {
   return document;
 }
 
-function query$16(client) {
+function query$17(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6540,7 +6575,7 @@ function query$16(client) {
   return document;
 }
 
-function query$17(client) {
+function query$18(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6902,7 +6937,7 @@ function query$17(client) {
   return document;
 }
 
-function query$18(client) {
+function query$19(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7271,7 +7306,7 @@ function query$18(client) {
   return document;
 }
 
-function query$19(client) {
+function query$20(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7640,7 +7675,7 @@ function query$19(client) {
   return document;
 }
 
-function query$20(client) {
+function query$21(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -8009,7 +8044,7 @@ function query$20(client) {
   return document;
 }
 
-function query$21(client) {
+function query$22(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -8376,7 +8411,7 @@ function query$21(client) {
   return document;
 }
 
-function query$22(client) {
+function query$23(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -8745,7 +8780,7 @@ function query$22(client) {
   return document;
 }
 
-function query$23(client) {
+function query$24(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -9114,7 +9149,7 @@ function query$23(client) {
   return document;
 }
 
-function query$24(client) {
+function query$25(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -9483,7 +9518,7 @@ function query$24(client) {
   return document;
 }
 
-function query$25(client) {
+function query$26(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -9884,7 +9919,7 @@ var CheckoutResource = function (_Resource) {
     value: function fetch(id) {
       var _this2 = this;
 
-      return this.graphQLClient.send(query$13, { id: id }).then(defaultResolver('node')).then(function (checkout) {
+      return this.graphQLClient.send(query$14, { id: id }).then(defaultResolver('node')).then(function (checkout) {
         if (!checkout) {
           return null;
         }
@@ -9926,7 +9961,7 @@ var CheckoutResource = function (_Resource) {
     value: function create() {
       var input = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-      return this.graphQLClient.send(query$14, { input: input }).then(handleCheckoutMutation('checkoutCreate', this.graphQLClient));
+      return this.graphQLClient.send(query$15, { input: input }).then(handleCheckoutMutation('checkoutCreate', this.graphQLClient));
     }
 
     /**
@@ -9953,7 +9988,7 @@ var CheckoutResource = function (_Resource) {
     value: function updateAttributes(checkoutId) {
       var input = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-      return this.graphQLClient.send(query$19, { checkoutId: checkoutId, input: input }).then(handleCheckoutMutation('checkoutAttributesUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$20, { checkoutId: checkoutId, input: input }).then(handleCheckoutMutation('checkoutAttributesUpdateV2', this.graphQLClient));
     }
 
     /**
@@ -9975,7 +10010,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateEmail',
     value: function updateEmail(checkoutId, email) {
-      return this.graphQLClient.send(query$24, { checkoutId: checkoutId, email: email }).then(handleCheckoutMutation('checkoutEmailUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$25, { checkoutId: checkoutId, email: email }).then(handleCheckoutMutation('checkoutEmailUpdateV2', this.graphQLClient));
     }
 
     /**
@@ -9997,7 +10032,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addLineItems',
     value: function addLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$15, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsAdd', this.graphQLClient));
+      return this.graphQLClient.send(query$16, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsAdd', this.graphQLClient));
     }
 
     /**
@@ -10019,7 +10054,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addDiscount',
     value: function addDiscount(checkoutId, discountCode) {
-      return this.graphQLClient.send(query$20, { checkoutId: checkoutId, discountCode: discountCode }).then(handleCheckoutMutation('checkoutDiscountCodeApplyV2', this.graphQLClient));
+      return this.graphQLClient.send(query$21, { checkoutId: checkoutId, discountCode: discountCode }).then(handleCheckoutMutation('checkoutDiscountCodeApplyV2', this.graphQLClient));
     }
 
     /**
@@ -10039,7 +10074,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeDiscount',
     value: function removeDiscount(checkoutId) {
-      return this.graphQLClient.send(query$21, { checkoutId: checkoutId }).then(handleCheckoutMutation('checkoutDiscountCodeRemove', this.graphQLClient));
+      return this.graphQLClient.send(query$22, { checkoutId: checkoutId }).then(handleCheckoutMutation('checkoutDiscountCodeRemove', this.graphQLClient));
     }
 
     /**
@@ -10061,7 +10096,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addGiftCards',
     value: function addGiftCards(checkoutId, giftCardCodes) {
-      return this.graphQLClient.send(query$22, { checkoutId: checkoutId, giftCardCodes: giftCardCodes }).then(handleCheckoutMutation('checkoutGiftCardsAppend', this.graphQLClient));
+      return this.graphQLClient.send(query$23, { checkoutId: checkoutId, giftCardCodes: giftCardCodes }).then(handleCheckoutMutation('checkoutGiftCardsAppend', this.graphQLClient));
     }
 
     /**
@@ -10083,7 +10118,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeGiftCard',
     value: function removeGiftCard(checkoutId, appliedGiftCardId) {
-      return this.graphQLClient.send(query$23, { checkoutId: checkoutId, appliedGiftCardId: appliedGiftCardId }).then(handleCheckoutMutation('checkoutGiftCardRemoveV2', this.graphQLClient));
+      return this.graphQLClient.send(query$24, { checkoutId: checkoutId, appliedGiftCardId: appliedGiftCardId }).then(handleCheckoutMutation('checkoutGiftCardRemoveV2', this.graphQLClient));
     }
 
     /**
@@ -10105,7 +10140,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeLineItems',
     value: function removeLineItems(checkoutId, lineItemIds) {
-      return this.graphQLClient.send(query$16, { checkoutId: checkoutId, lineItemIds: lineItemIds }).then(handleCheckoutMutation('checkoutLineItemsRemove', this.graphQLClient));
+      return this.graphQLClient.send(query$17, { checkoutId: checkoutId, lineItemIds: lineItemIds }).then(handleCheckoutMutation('checkoutLineItemsRemove', this.graphQLClient));
     }
 
     /**
@@ -10127,7 +10162,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'replaceLineItems',
     value: function replaceLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$17, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsReplace', this.graphQLClient));
+      return this.graphQLClient.send(query$18, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsReplace', this.graphQLClient));
     }
 
     /**
@@ -10155,7 +10190,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateLineItems',
     value: function updateLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$18, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsUpdate', this.graphQLClient));
+      return this.graphQLClient.send(query$19, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsUpdate', this.graphQLClient));
     }
 
     /**
@@ -10188,7 +10223,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateShippingAddress',
     value: function updateShippingAddress(checkoutId, shippingAddress) {
-      return this.graphQLClient.send(query$25, { checkoutId: checkoutId, shippingAddress: shippingAddress }).then(handleCheckoutMutation('checkoutShippingAddressUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$26, { checkoutId: checkoutId, shippingAddress: shippingAddress }).then(handleCheckoutMutation('checkoutShippingAddressUpdateV2', this.graphQLClient));
     }
   }]);
   return CheckoutResource;

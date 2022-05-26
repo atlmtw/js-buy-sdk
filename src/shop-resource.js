@@ -4,6 +4,7 @@ import defaultResolver from './default-resolver';
 // GraphQL
 import shopQuery from './graphql/shopQuery.graphql';
 import shopPolicyQuery from './graphql/shopPolicyQuery.graphql';
+import localizationQuery from './graphql/localizationQuery.graphql';
 
 /**
  * The JS Buy SDK shop resource
@@ -26,6 +27,16 @@ class ShopResource extends Resource {
     return this.graphQLClient
       .send(shopQuery)
       .then(defaultResolver('shop'));
+  }
+
+  /**
+   * 
+   * @returns a list of available countries that the store has enabled
+   */
+  fetchCountries() {
+    return this.graphQLClient
+      .send(localizationQuery)
+      .then(defaultResolver('localization'));
   }
 
   /**
