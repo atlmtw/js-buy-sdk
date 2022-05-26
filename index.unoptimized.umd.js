@@ -4997,21 +4997,38 @@ function query$12(client) {
 
 function query$13(client) {
   var document = client.document();
+  var spreads = {};
+  spreads.LanguageFragment = document.defineFragment("LanguageFragment", "Language", function (root) {
+    root.add("endonymName");
+    root.add("isoCode", {
+      alias: "value"
+    });
+    root.add("name");
+  });
+  spreads.CountryFragment = document.defineFragment("CountryFragment", "Country", function (root) {
+    root.add("currency", function (currency) {
+      currency.add("isoCode");
+      currency.add("name");
+      currency.add("symbol");
+    });
+    root.add("isoCode", {
+      alias: "value"
+    });
+    root.add("name");
+  });
   document.addQuery(function (root) {
     root.add("localization", function (localization) {
       localization.add("availableLanguages", function (availableLanguages) {
-        availableLanguages.add("endonymName");
-        availableLanguages.add("isoCode");
-        availableLanguages.add("name");
+        availableLanguages.addFragment(spreads.LanguageFragment);
       });
       localization.add("availableCountries", function (availableCountries) {
-        availableCountries.add("currency", function (currency) {
-          currency.add("isoCode");
-          currency.add("name");
-          currency.add("symbol");
-        });
-        availableCountries.add("isoCode");
-        availableCountries.add("name");
+        availableCountries.addFragment(spreads.CountryFragment);
+      });
+      localization.add("country", function (country) {
+        country.addFragment(spreads.CountryFragment);
+      });
+      localization.add("language", function (language) {
+        language.addFragment(spreads.LanguageFragment);
       });
     });
   });

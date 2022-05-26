@@ -1,18 +1,33 @@
+fragment LanguageFragment on Language {
+    endonymName
+    value:isoCode
+    name
+}
+
+fragment CountryFragment on Country {
+    currency {
+        isoCode
+        name
+        symbol
+    }
+    value:isoCode
+    name
+}
+
+
 query {
     localization {
         availableLanguages {
-            endonymName
-            isoCode
-            name
+            ...LanguageFragment
         }
         availableCountries {
-            currency {
-                isoCode
-                name
-                symbol
-            }
-            isoCode
-            name
+            ...CountryFragment
+        }
+        country {
+            ...CountryFragment
+        }
+        language {
+            ...LanguageFragment
         }
     }
 }
