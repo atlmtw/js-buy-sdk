@@ -4,15 +4,15 @@ fragment LanguageFragment on Language {
     name
 }
 
-fragment CountryFragment on Country {
-    currency {
-        isoCode
-        name
-        symbol
-    }
-    value:isoCode
-    name
-}
+# fragment CountryFragment on Country {
+#     currency {
+#         isoCode
+#         name
+#         symbol
+#     }
+#     value:isoCode
+#     name
+# }
 
 
 query {
