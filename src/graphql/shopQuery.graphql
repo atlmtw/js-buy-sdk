@@ -2,9 +2,9 @@ query {
   shop {
     paymentSettings {
       enabledPresentmentCurrencies
+      countryCode
+      currencyCode
     }
-    countryCode
-    currencyCode
     description
     moneyFormat
     name

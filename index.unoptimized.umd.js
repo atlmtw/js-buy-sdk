@@ -4956,9 +4956,9 @@ function query$11(client) {
     root.add("shop", function (shop) {
       shop.add("paymentSettings", function (paymentSettings) {
         paymentSettings.add("enabledPresentmentCurrencies");
+        paymentSettings.add("countryCode");
+        paymentSettings.add("currencyCode");
       });
-      shop.add("countryCode");
-      shop.add("currencyCode");
       shop.add("description");
       shop.add("moneyFormat");
       shop.add("name");
