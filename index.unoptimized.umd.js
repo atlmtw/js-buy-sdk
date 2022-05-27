@@ -5007,10 +5007,27 @@ function query$13(client) {
     });
     root.add("name");
   });
+  spreads.CountryFragment = document.defineFragment("CountryFragment", "Country", function (root) {
+    root.add("currency", function (currency) {
+      currency.add("isoCode");
+      currency.add("name");
+      currency.add("symbol");
+    });
+    root.add("isoCode", {
+      alias: "value"
+    });
+    root.add("name");
+  });
   document.addQuery(function (root) {
     root.add("localization", function (localization) {
       localization.add("availableLanguages", function (availableLanguages) {
         availableLanguages.addFragment(spreads.LanguageFragment);
+      });
+      localization.add("availableCountries", function (availableCountries) {
+        availableCountries.addFragment(spreads.CountryFragment);
+      });
+      localization.add("country", function (country) {
+        country.addFragment(spreads.CountryFragment);
       });
       localization.add("language", function (language) {
         language.addFragment(spreads.LanguageFragment);
