@@ -3,6 +3,8 @@ query {
     paymentSettings {
       enabledPresentmentCurrencies
     }
+    countryCode
+    currencyCode
     description
     moneyFormat
     name

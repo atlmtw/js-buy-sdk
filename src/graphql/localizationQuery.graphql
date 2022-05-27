@@ -20,12 +20,12 @@ query {
         availableLanguages {
             ...LanguageFragment
         }
-        availableCountries {
-            ...CountryFragment
-        }
-        country {
-            ...CountryFragment
-        }
+        # availableCountries {
+        #     ...CountryFragment
+        # }
+        # country {
+        #     ...CountryFragment
+        # }
         language {
             ...LanguageFragment
         }
