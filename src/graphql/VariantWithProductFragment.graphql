@@ -6,19 +6,19 @@ fragment VariantWithProductFragment on ProductVariant {
     vendor,
     title,
     productType,
-    metafields(first: 5) {
-      pageInfo {
-        hasNextPage
-        hasPreviousPage
-      }
-      edges {
-        cursor
-        node {
-          id
-          key
-          value
-        }
-      }
-    }
+    # metafields(first: 5) {
+    #   pageInfo {
+    #     hasNextPage
+    #     hasPreviousPage
+    #   }
+    #   edges {
+    #     cursor
+    #     node {
+    #       id
+    #       key
+    #       value
+    #     }
+    #   }
+    # }
   }
 }

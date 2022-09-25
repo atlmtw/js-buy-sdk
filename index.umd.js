@@ -10077,95 +10077,17 @@ var ImageResource = function (_Resource) {
 
 var version = "2.16.1";
 
-var ApiVersion = {
-  "name": "ApiVersion",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "displayName": "String",
-    "handle": "String",
-    "supported": "Boolean"
-  },
-  "implementsNode": false
-};
-
 var AppliedGiftCard = {
   "name": "AppliedGiftCard",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "amountUsed": "Money",
     "amountUsedV2": "MoneyV2",
-    "balance": "Money",
     "balanceV2": "MoneyV2",
     "id": "ID",
     "lastCharacters": "String",
     "presentmentAmountUsed": "MoneyV2"
   },
   "implementsNode": true
-};
-
-var Article = {
-  "name": "Article",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "author": "ArticleAuthor",
-    "authorV2": "ArticleAuthor",
-    "blog": "Blog",
-    "comments": "CommentConnection",
-    "content": "String",
-    "contentHtml": "HTML",
-    "excerpt": "String",
-    "excerptHtml": "HTML",
-    "handle": "String",
-    "id": "ID",
-    "image": "Image",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
-    "onlineStoreUrl": "URL",
-    "publishedAt": "DateTime",
-    "seo": "SEO",
-    "tags": "String",
-    "title": "String"
-  },
-  "implementsNode": true
-};
-
-var ArticleAuthor = {
-  "name": "ArticleAuthor",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "bio": "String",
-    "email": "String",
-    "firstName": "String",
-    "lastName": "String",
-    "name": "String"
-  },
-  "implementsNode": false
-};
-
-var ArticleConnection = {
-  "name": "ArticleConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "ArticleEdge",
-    "nodes": "Article",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var ArticleEdge = {
-  "name": "ArticleEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Article"
-  },
-  "implementsNode": false
-};
-
-var ArticleSortKeys = {
-  "name": "ArticleSortKeys",
-  "kind": "ENUM"
 };
 
 var Attribute = {
@@ -10178,80 +10100,13 @@ var Attribute = {
   "implementsNode": false
 };
 
-var AttributeInput = {
-  "name": "AttributeInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "key": "String",
-    "value": "String"
-  }
-};
-
 var AutomaticDiscountApplication = {
   "name": "AutomaticDiscountApplication",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "allocationMethod": "DiscountApplicationAllocationMethod",
-    "targetSelection": "DiscountApplicationTargetSelection",
-    "targetType": "DiscountApplicationTargetType",
-    "title": "String",
-    "value": "PricingValue"
-  },
-  "implementsNode": false
-};
-
-var AvailableShippingRates = {
-  "name": "AvailableShippingRates",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "ready": "Boolean",
-    "shippingRates": "ShippingRate"
-  },
-  "implementsNode": false
-};
-
-var Blog = {
-  "name": "Blog",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "articleByHandle": "Article",
-    "articles": "ArticleConnection",
-    "authors": "ArticleAuthor",
-    "handle": "String",
-    "id": "ID",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
-    "onlineStoreUrl": "URL",
-    "seo": "SEO",
     "title": "String"
   },
-  "implementsNode": true
-};
-
-var BlogConnection = {
-  "name": "BlogConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "BlogEdge",
-    "nodes": "Blog",
-    "pageInfo": "PageInfo"
-  },
   "implementsNode": false
-};
-
-var BlogEdge = {
-  "name": "BlogEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Blog"
-  },
-  "implementsNode": false
-};
-
-var BlogSortKeys = {
-  "name": "BlogSortKeys",
-  "kind": "ENUM"
 };
 
 var Boolean$1 = {
@@ -10259,382 +10114,11 @@ var Boolean$1 = {
   "kind": "SCALAR"
 };
 
-var CardBrand = {
-  "name": "CardBrand",
-  "kind": "ENUM"
-};
-
-var Cart = {
-  "name": "Cart",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "attribute": "Attribute",
-    "attributes": "Attribute",
-    "buyerIdentity": "CartBuyerIdentity",
-    "checkoutUrl": "URL",
-    "cost": "CartCost",
-    "createdAt": "DateTime",
-    "deliveryGroups": "CartDeliveryGroupConnection",
-    "discountAllocations": "CartDiscountAllocation",
-    "discountCodes": "CartDiscountCode",
-    "estimatedCost": "CartEstimatedCost",
-    "id": "ID",
-    "lines": "CartLineConnection",
-    "note": "String",
-    "totalQuantity": "Int",
-    "updatedAt": "DateTime"
-  },
-  "implementsNode": true
-};
-
-var CartAttributesUpdatePayload = {
-  "name": "CartAttributesUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartAutomaticDiscountAllocation = {
-  "name": "CartAutomaticDiscountAllocation",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "discountedAmount": "MoneyV2",
-    "title": "String"
-  },
-  "implementsNode": false
-};
-
-var CartBuyerIdentity = {
-  "name": "CartBuyerIdentity",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "countryCode": "CountryCode",
-    "customer": "Customer",
-    "email": "String",
-    "phone": "String"
-  },
-  "implementsNode": false
-};
-
-var CartBuyerIdentityInput = {
-  "name": "CartBuyerIdentityInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "email": "String",
-    "phone": "String",
-    "countryCode": "CountryCode",
-    "customerAccessToken": "String"
-  }
-};
-
-var CartBuyerIdentityUpdatePayload = {
-  "name": "CartBuyerIdentityUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartCodeDiscountAllocation = {
-  "name": "CartCodeDiscountAllocation",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "code": "String",
-    "discountedAmount": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var CartCost = {
-  "name": "CartCost",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkoutChargeAmount": "MoneyV2",
-    "subtotalAmount": "MoneyV2",
-    "subtotalAmountEstimated": "Boolean",
-    "totalAmount": "MoneyV2",
-    "totalAmountEstimated": "Boolean",
-    "totalDutyAmount": "MoneyV2",
-    "totalDutyAmountEstimated": "Boolean",
-    "totalTaxAmount": "MoneyV2",
-    "totalTaxAmountEstimated": "Boolean"
-  },
-  "implementsNode": false
-};
-
-var CartCreatePayload = {
-  "name": "CartCreatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartCustomDiscountAllocation = {
-  "name": "CartCustomDiscountAllocation",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "discountedAmount": "MoneyV2",
-    "title": "String"
-  },
-  "implementsNode": false
-};
-
-var CartDeliveryGroup = {
-  "name": "CartDeliveryGroup",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cartLines": "CartLineConnection",
-    "deliveryAddress": "MailingAddress",
-    "deliveryOptions": "CartDeliveryOption",
-    "id": "ID"
-  },
-  "implementsNode": false
-};
-
-var CartDeliveryGroupConnection = {
-  "name": "CartDeliveryGroupConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "CartDeliveryGroupEdge",
-    "nodes": "CartDeliveryGroup",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var CartDeliveryGroupEdge = {
-  "name": "CartDeliveryGroupEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "CartDeliveryGroup"
-  },
-  "implementsNode": false
-};
-
-var CartDeliveryOption = {
-  "name": "CartDeliveryOption",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "code": "String",
-    "deliveryMethodType": "DeliveryMethodType",
-    "description": "String",
-    "estimatedCost": "MoneyV2",
-    "title": "String"
-  },
-  "implementsNode": false
-};
-
-var CartDiscountAllocation = {
-  "name": "CartDiscountAllocation",
-  "kind": "INTERFACE",
-  "fieldBaseTypes": {
-    "discountedAmount": "MoneyV2"
-  },
-  "possibleTypes": ["CartAutomaticDiscountAllocation", "CartCodeDiscountAllocation", "CartCustomDiscountAllocation"]
-};
-
-var CartDiscountCode = {
-  "name": "CartDiscountCode",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "applicable": "Boolean",
-    "code": "String"
-  },
-  "implementsNode": false
-};
-
-var CartDiscountCodesUpdatePayload = {
-  "name": "CartDiscountCodesUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartErrorCode = {
-  "name": "CartErrorCode",
-  "kind": "ENUM"
-};
-
-var CartEstimatedCost = {
-  "name": "CartEstimatedCost",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkoutChargeAmount": "MoneyV2",
-    "subtotalAmount": "MoneyV2",
-    "totalAmount": "MoneyV2",
-    "totalDutyAmount": "MoneyV2",
-    "totalTaxAmount": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var CartInput = {
-  "name": "CartInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "attributes": "AttributeInput",
-    "lines": "CartLineInput",
-    "discountCodes": "String",
-    "note": "String",
-    "buyerIdentity": "CartBuyerIdentityInput"
-  }
-};
-
-var CartLine = {
-  "name": "CartLine",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "attribute": "Attribute",
-    "attributes": "Attribute",
-    "cost": "CartLineCost",
-    "discountAllocations": "CartDiscountAllocation",
-    "estimatedCost": "CartLineEstimatedCost",
-    "id": "ID",
-    "merchandise": "Merchandise",
-    "quantity": "Int",
-    "sellingPlanAllocation": "SellingPlanAllocation"
-  },
-  "implementsNode": true
-};
-
-var CartLineConnection = {
-  "name": "CartLineConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "CartLineEdge",
-    "nodes": "CartLine",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var CartLineCost = {
-  "name": "CartLineCost",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "amountPerQuantity": "MoneyV2",
-    "compareAtAmountPerQuantity": "MoneyV2",
-    "subtotalAmount": "MoneyV2",
-    "totalAmount": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var CartLineEdge = {
-  "name": "CartLineEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "CartLine"
-  },
-  "implementsNode": false
-};
-
-var CartLineEstimatedCost = {
-  "name": "CartLineEstimatedCost",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "amount": "MoneyV2",
-    "compareAtAmount": "MoneyV2",
-    "subtotalAmount": "MoneyV2",
-    "totalAmount": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var CartLineInput = {
-  "name": "CartLineInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "attributes": "AttributeInput",
-    "quantity": "Int",
-    "merchandiseId": "ID",
-    "sellingPlanId": "ID"
-  }
-};
-
-var CartLineUpdateInput = {
-  "name": "CartLineUpdateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "id": "ID",
-    "quantity": "Int",
-    "merchandiseId": "ID",
-    "attributes": "AttributeInput",
-    "sellingPlanId": "ID"
-  }
-};
-
-var CartLinesAddPayload = {
-  "name": "CartLinesAddPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartLinesRemovePayload = {
-  "name": "CartLinesRemovePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartLinesUpdatePayload = {
-  "name": "CartLinesUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartNoteUpdatePayload = {
-  "name": "CartNoteUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cart": "Cart",
-    "userErrors": "CartUserError"
-  },
-  "implementsNode": false
-};
-
-var CartUserError = {
-  "name": "CartUserError",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "code": "CartErrorCode",
-    "field": "String",
-    "message": "String"
-  },
-  "implementsNode": false
-};
-
 var Checkout = {
   "name": "Checkout",
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "appliedGiftCards": "AppliedGiftCard",
-    "availableShippingRates": "AvailableShippingRates",
-    "buyerIdentity": "CheckoutBuyerIdentity",
     "completedAt": "DateTime",
     "createdAt": "DateTime",
     "currencyCode": "CurrencyCode",
@@ -10652,13 +10136,11 @@ var Checkout = {
     "ready": "Boolean",
     "requiresShipping": "Boolean",
     "shippingAddress": "MailingAddress",
-    "shippingDiscountAllocations": "DiscountAllocation",
     "shippingLine": "ShippingRate",
     "subtotalPrice": "Money",
     "subtotalPriceV2": "MoneyV2",
     "taxExempt": "Boolean",
     "taxesIncluded": "Boolean",
-    "totalDuties": "MoneyV2",
     "totalPrice": "Money",
     "totalPriceV2": "MoneyV2",
     "totalTax": "Money",
@@ -10667,16 +10149,6 @@ var Checkout = {
     "webUrl": "URL"
   },
   "implementsNode": true
-};
-
-var CheckoutAttributesUpdateV2Input = {
-  "name": "CheckoutAttributesUpdateV2Input",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "note": "String",
-    "customAttributes": "AttributeInput",
-    "allowPartialAddresses": "Boolean"
-  }
 };
 
 var CheckoutAttributesUpdateV2Payload = {
@@ -10690,98 +10162,8 @@ var CheckoutAttributesUpdateV2Payload = {
   "implementsNode": false
 };
 
-var CheckoutBuyerIdentity = {
-  "name": "CheckoutBuyerIdentity",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "countryCode": "CountryCode"
-  },
-  "implementsNode": false
-};
-
-var CheckoutBuyerIdentityInput = {
-  "name": "CheckoutBuyerIdentityInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "countryCode": "CountryCode"
-  }
-};
-
-var CheckoutCompleteFreePayload = {
-  "name": "CheckoutCompleteFreePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkout": "Checkout",
-    "checkoutUserErrors": "CheckoutUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CheckoutCompleteWithCreditCardV2Payload = {
-  "name": "CheckoutCompleteWithCreditCardV2Payload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkout": "Checkout",
-    "checkoutUserErrors": "CheckoutUserError",
-    "payment": "Payment",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CheckoutCompleteWithTokenizedPaymentV3Payload = {
-  "name": "CheckoutCompleteWithTokenizedPaymentV3Payload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkout": "Checkout",
-    "checkoutUserErrors": "CheckoutUserError",
-    "payment": "Payment",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CheckoutCreateInput = {
-  "name": "CheckoutCreateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "email": "String",
-    "lineItems": "CheckoutLineItemInput",
-    "shippingAddress": "MailingAddressInput",
-    "note": "String",
-    "customAttributes": "AttributeInput",
-    "allowPartialAddresses": "Boolean",
-    "buyerIdentity": "CheckoutBuyerIdentityInput"
-  }
-};
-
 var CheckoutCreatePayload = {
   "name": "CheckoutCreatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkout": "Checkout",
-    "checkoutUserErrors": "CheckoutUserError",
-    "queueToken": "String",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CheckoutCustomerAssociateV2Payload = {
-  "name": "CheckoutCustomerAssociateV2Payload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkout": "Checkout",
-    "checkoutUserErrors": "CheckoutUserError",
-    "customer": "Customer",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CheckoutCustomerDisassociateV2Payload = {
-  "name": "CheckoutCustomerDisassociateV2Payload",
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "checkout": "Checkout",
@@ -10860,7 +10242,6 @@ var CheckoutLineItem = {
     "id": "ID",
     "quantity": "Int",
     "title": "String",
-    "unitPrice": "MoneyV2",
     "variant": "ProductVariant"
   },
   "implementsNode": true
@@ -10871,7 +10252,6 @@ var CheckoutLineItemConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "CheckoutLineItemEdge",
-    "nodes": "CheckoutLineItem",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
@@ -10885,27 +10265,6 @@ var CheckoutLineItemEdge = {
     "node": "CheckoutLineItem"
   },
   "implementsNode": false
-};
-
-var CheckoutLineItemInput = {
-  "name": "CheckoutLineItemInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "customAttributes": "AttributeInput",
-    "quantity": "Int",
-    "variantId": "ID"
-  }
-};
-
-var CheckoutLineItemUpdateInput = {
-  "name": "CheckoutLineItemUpdateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "id": "ID",
-    "variantId": "ID",
-    "quantity": "Int",
-    "customAttributes": "AttributeInput"
-  }
 };
 
 var CheckoutLineItemsAddPayload = {
@@ -10962,17 +10321,6 @@ var CheckoutShippingAddressUpdateV2Payload = {
   "implementsNode": false
 };
 
-var CheckoutShippingLineUpdatePayload = {
-  "name": "CheckoutShippingLineUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkout": "Checkout",
-    "checkoutUserErrors": "CheckoutUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
 var CheckoutUserError = {
   "name": "CheckoutUserError",
   "kind": "OBJECT",
@@ -10993,11 +10341,7 @@ var Collection = {
     "handle": "String",
     "id": "ID",
     "image": "Image",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
-    "onlineStoreUrl": "URL",
     "products": "ProductConnection",
-    "seo": "SEO",
     "title": "String",
     "updatedAt": "DateTime"
   },
@@ -11009,7 +10353,6 @@ var CollectionConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "CollectionEdge",
-    "nodes": "Collection",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
@@ -11025,102 +10368,19 @@ var CollectionEdge = {
   "implementsNode": false
 };
 
-var CollectionSortKeys = {
-  "name": "CollectionSortKeys",
-  "kind": "ENUM"
-};
-
-var Comment = {
-  "name": "Comment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "author": "CommentAuthor",
-    "content": "String",
-    "contentHtml": "HTML",
-    "id": "ID"
-  },
-  "implementsNode": true
-};
-
-var CommentAuthor = {
-  "name": "CommentAuthor",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "email": "String",
-    "name": "String"
-  },
-  "implementsNode": false
-};
-
-var CommentConnection = {
-  "name": "CommentConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "CommentEdge",
-    "nodes": "Comment",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var CommentEdge = {
-  "name": "CommentEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Comment"
-  },
-  "implementsNode": false
-};
-
 var Country = {
   "name": "Country",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "availableLanguages": "Language",
     "currency": "Currency",
     "isoCode": "CountryCode",
-    "name": "String",
-    "unitSystem": "UnitSystem"
+    "name": "String"
   },
   "implementsNode": false
 };
 
 var CountryCode = {
   "name": "CountryCode",
-  "kind": "ENUM"
-};
-
-var CreditCard = {
-  "name": "CreditCard",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "brand": "String",
-    "expiryMonth": "Int",
-    "expiryYear": "Int",
-    "firstDigits": "String",
-    "firstName": "String",
-    "lastDigits": "String",
-    "lastName": "String",
-    "maskedNumber": "String"
-  },
-  "implementsNode": false
-};
-
-var CreditCardPaymentInputV2 = {
-  "name": "CreditCardPaymentInputV2",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "paymentAmount": "MoneyInput",
-    "idempotencyKey": "String",
-    "billingAddress": "MailingAddressInput",
-    "vaultId": "String",
-    "test": "Boolean"
-  }
-};
-
-var CropRegion = {
-  "name": "CropRegion",
   "kind": "ENUM"
 };
 
@@ -11140,275 +10400,6 @@ var CurrencyCode = {
   "kind": "ENUM"
 };
 
-var Customer = {
-  "name": "Customer",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "acceptsMarketing": "Boolean",
-    "addresses": "MailingAddressConnection",
-    "createdAt": "DateTime",
-    "defaultAddress": "MailingAddress",
-    "displayName": "String",
-    "email": "String",
-    "firstName": "String",
-    "id": "ID",
-    "lastIncompleteCheckout": "Checkout",
-    "lastName": "String",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
-    "orders": "OrderConnection",
-    "phone": "String",
-    "tags": "String",
-    "updatedAt": "DateTime"
-  },
-  "implementsNode": false
-};
-
-var CustomerAccessToken = {
-  "name": "CustomerAccessToken",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "accessToken": "String",
-    "expiresAt": "DateTime"
-  },
-  "implementsNode": false
-};
-
-var CustomerAccessTokenCreateInput = {
-  "name": "CustomerAccessTokenCreateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "email": "String",
-    "password": "String"
-  }
-};
-
-var CustomerAccessTokenCreatePayload = {
-  "name": "CustomerAccessTokenCreatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerAccessTokenCreateWithMultipassPayload = {
-  "name": "CustomerAccessTokenCreateWithMultipassPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerAccessTokenDeletePayload = {
-  "name": "CustomerAccessTokenDeletePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "deletedAccessToken": "String",
-    "deletedCustomerAccessTokenId": "String",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerAccessTokenRenewPayload = {
-  "name": "CustomerAccessTokenRenewPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerAccessToken": "CustomerAccessToken",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerActivateByUrlPayload = {
-  "name": "CustomerActivateByUrlPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerActivateInput = {
-  "name": "CustomerActivateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "activationToken": "String",
-    "password": "String"
-  }
-};
-
-var CustomerActivatePayload = {
-  "name": "CustomerActivatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerAddressCreatePayload = {
-  "name": "CustomerAddressCreatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerAddress": "MailingAddress",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerAddressDeletePayload = {
-  "name": "CustomerAddressDeletePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerUserErrors": "CustomerUserError",
-    "deletedCustomerAddressId": "String",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerAddressUpdatePayload = {
-  "name": "CustomerAddressUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerAddress": "MailingAddress",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerCreateInput = {
-  "name": "CustomerCreateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "firstName": "String",
-    "lastName": "String",
-    "email": "String",
-    "phone": "String",
-    "password": "String",
-    "acceptsMarketing": "Boolean"
-  }
-};
-
-var CustomerCreatePayload = {
-  "name": "CustomerCreatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerDefaultAddressUpdatePayload = {
-  "name": "CustomerDefaultAddressUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerErrorCode = {
-  "name": "CustomerErrorCode",
-  "kind": "ENUM"
-};
-
-var CustomerRecoverPayload = {
-  "name": "CustomerRecoverPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerResetByUrlPayload = {
-  "name": "CustomerResetByUrlPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerResetInput = {
-  "name": "CustomerResetInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "resetToken": "String",
-    "password": "String"
-  }
-};
-
-var CustomerResetPayload = {
-  "name": "CustomerResetPayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerUpdateInput = {
-  "name": "CustomerUpdateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "firstName": "String",
-    "lastName": "String",
-    "email": "String",
-    "phone": "String",
-    "password": "String",
-    "acceptsMarketing": "Boolean"
-  }
-};
-
-var CustomerUpdatePayload = {
-  "name": "CustomerUpdatePayload",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "customer": "Customer",
-    "customerAccessToken": "CustomerAccessToken",
-    "customerUserErrors": "CustomerUserError",
-    "userErrors": "UserError"
-  },
-  "implementsNode": false
-};
-
-var CustomerUserError = {
-  "name": "CustomerUserError",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "code": "CustomerErrorCode",
-    "field": "String",
-    "message": "String"
-  },
-  "implementsNode": false
-};
-
 var DateTime = {
   "name": "DateTime",
   "kind": "SCALAR"
@@ -11417,16 +10408,6 @@ var DateTime = {
 var Decimal = {
   "name": "Decimal",
   "kind": "SCALAR"
-};
-
-var DeliveryMethodType = {
-  "name": "DeliveryMethodType",
-  "kind": "ENUM"
-};
-
-var DigitalWallet = {
-  "name": "DigitalWallet",
-  "kind": "ENUM"
 };
 
 var DiscountAllocation = {
@@ -11461,7 +10442,6 @@ var DiscountApplicationConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "DiscountApplicationEdge",
-    "nodes": "DiscountApplication",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
@@ -11471,7 +10451,6 @@ var DiscountApplicationEdge = {
   "name": "DiscountApplicationEdge",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "cursor": "String",
     "node": "DiscountApplication"
   },
   "implementsNode": false
@@ -11491,24 +10470,10 @@ var DiscountCodeApplication = {
   "name": "DiscountCodeApplication",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "allocationMethod": "DiscountApplicationAllocationMethod",
     "applicable": "Boolean",
-    "code": "String",
-    "targetSelection": "DiscountApplicationTargetSelection",
-    "targetType": "DiscountApplicationTargetType",
-    "value": "PricingValue"
+    "code": "String"
   },
   "implementsNode": false
-};
-
-var DisplayableError = {
-  "name": "DisplayableError",
-  "kind": "INTERFACE",
-  "fieldBaseTypes": {
-    "field": "String",
-    "message": "String"
-  },
-  "possibleTypes": ["CartUserError", "CheckoutUserError", "CustomerUserError", "UserError"]
 };
 
 var Domain = {
@@ -11522,153 +10487,14 @@ var Domain = {
   "implementsNode": false
 };
 
-var ExternalVideo = {
-  "name": "ExternalVideo",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "alt": "String",
-    "embedUrl": "URL",
-    "embeddedUrl": "URL",
-    "host": "MediaHost",
-    "id": "ID",
-    "mediaContentType": "MediaContentType",
-    "originUrl": "URL",
-    "previewImage": "Image"
-  },
-  "implementsNode": true
-};
-
-var Filter = {
-  "name": "Filter",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "id": "String",
-    "label": "String",
-    "type": "FilterType",
-    "values": "FilterValue"
-  },
-  "implementsNode": false
-};
-
-var FilterType = {
-  "name": "FilterType",
-  "kind": "ENUM"
-};
-
-var FilterValue = {
-  "name": "FilterValue",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "count": "Int",
-    "id": "String",
-    "input": "JSON",
-    "label": "String"
-  },
-  "implementsNode": false
-};
-
 var Float = {
   "name": "Float",
   "kind": "SCALAR"
 };
 
-var Fulfillment = {
-  "name": "Fulfillment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "fulfillmentLineItems": "FulfillmentLineItemConnection",
-    "trackingCompany": "String",
-    "trackingInfo": "FulfillmentTrackingInfo"
-  },
-  "implementsNode": false
-};
-
-var FulfillmentLineItem = {
-  "name": "FulfillmentLineItem",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "lineItem": "OrderLineItem",
-    "quantity": "Int"
-  },
-  "implementsNode": false
-};
-
-var FulfillmentLineItemConnection = {
-  "name": "FulfillmentLineItemConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "FulfillmentLineItemEdge",
-    "nodes": "FulfillmentLineItem",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var FulfillmentLineItemEdge = {
-  "name": "FulfillmentLineItemEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "FulfillmentLineItem"
-  },
-  "implementsNode": false
-};
-
-var FulfillmentTrackingInfo = {
-  "name": "FulfillmentTrackingInfo",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "number": "String",
-    "url": "URL"
-  },
-  "implementsNode": false
-};
-
-var GenericFile = {
-  "name": "GenericFile",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "alt": "String",
-    "id": "ID",
-    "mimeType": "String",
-    "originalFileSize": "Int",
-    "previewImage": "Image",
-    "url": "URL"
-  },
-  "implementsNode": true
-};
-
-var GeoCoordinateInput = {
-  "name": "GeoCoordinateInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "latitude": "Float",
-    "longitude": "Float"
-  }
-};
-
 var HTML = {
   "name": "HTML",
   "kind": "SCALAR"
-};
-
-var HasMetafields = {
-  "name": "HasMetafields",
-  "kind": "INTERFACE",
-  "fieldBaseTypes": {
-    "metafield": "Metafield",
-    "metafields": "Metafield"
-  },
-  "possibleTypes": ["Article", "Blog", "Collection", "Customer", "Order", "Page", "Product", "ProductVariant", "Shop"]
-};
-
-var HasMetafieldsIdentifier = {
-  "name": "HasMetafieldsIdentifier",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "namespace": "String",
-    "key": "String"
-  }
 };
 
 var ID = {
@@ -11683,9 +10509,6 @@ var Image = {
     "altText": "String",
     "height": "Int",
     "id": "ID",
-    "originalSrc": "URL",
-    "src": "URL",
-    "transformedSrc": "URL",
     "url": "URL",
     "width": "Int"
   },
@@ -11697,15 +10520,9 @@ var ImageConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "ImageEdge",
-    "nodes": "Image",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
-};
-
-var ImageContentType = {
-  "name": "ImageContentType",
-  "kind": "ENUM"
 };
 
 var ImageEdge = {
@@ -11718,25 +10535,8 @@ var ImageEdge = {
   "implementsNode": false
 };
 
-var ImageTransformInput = {
-  "name": "ImageTransformInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "crop": "CropRegion",
-    "maxWidth": "Int",
-    "maxHeight": "Int",
-    "scale": "Int",
-    "preferredContentType": "ImageContentType"
-  }
-};
-
 var Int = {
   "name": "Int",
-  "kind": "SCALAR"
-};
-
-var JSON$1 = {
-  "name": "JSON",
   "kind": "SCALAR"
 };
 
@@ -11768,63 +10568,6 @@ var Localization = {
   "implementsNode": false
 };
 
-var Location = {
-  "name": "Location",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "address": "LocationAddress",
-    "id": "ID",
-    "name": "String"
-  },
-  "implementsNode": true
-};
-
-var LocationAddress = {
-  "name": "LocationAddress",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "address1": "String",
-    "address2": "String",
-    "city": "String",
-    "country": "String",
-    "countryCode": "String",
-    "formatted": "String",
-    "latitude": "Float",
-    "longitude": "Float",
-    "phone": "String",
-    "province": "String",
-    "provinceCode": "String",
-    "zip": "String"
-  },
-  "implementsNode": false
-};
-
-var LocationConnection = {
-  "name": "LocationConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "LocationEdge",
-    "nodes": "Location",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var LocationEdge = {
-  "name": "LocationEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Location"
-  },
-  "implementsNode": false
-};
-
-var LocationSortKeys = {
-  "name": "LocationSortKeys",
-  "kind": "ENUM"
-};
-
 var MailingAddress = {
   "name": "MailingAddress",
   "kind": "OBJECT",
@@ -11834,11 +10577,9 @@ var MailingAddress = {
     "city": "String",
     "company": "String",
     "country": "String",
-    "countryCode": "String",
     "countryCodeV2": "CountryCode",
     "firstName": "String",
     "formatted": "String",
-    "formattedArea": "String",
     "id": "ID",
     "lastName": "String",
     "latitude": "Float",
@@ -11852,210 +10593,12 @@ var MailingAddress = {
   "implementsNode": true
 };
 
-var MailingAddressConnection = {
-  "name": "MailingAddressConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "MailingAddressEdge",
-    "nodes": "MailingAddress",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var MailingAddressEdge = {
-  "name": "MailingAddressEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "MailingAddress"
-  },
-  "implementsNode": false
-};
-
-var MailingAddressInput = {
-  "name": "MailingAddressInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "address1": "String",
-    "address2": "String",
-    "city": "String",
-    "company": "String",
-    "country": "String",
-    "firstName": "String",
-    "lastName": "String",
-    "phone": "String",
-    "province": "String",
-    "zip": "String"
-  }
-};
-
 var ManualDiscountApplication = {
   "name": "ManualDiscountApplication",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "allocationMethod": "DiscountApplicationAllocationMethod",
     "description": "String",
-    "targetSelection": "DiscountApplicationTargetSelection",
-    "targetType": "DiscountApplicationTargetType",
-    "title": "String",
-    "value": "PricingValue"
-  },
-  "implementsNode": false
-};
-
-var Media = {
-  "name": "Media",
-  "kind": "INTERFACE",
-  "fieldBaseTypes": {
-    "alt": "String",
-    "mediaContentType": "MediaContentType",
-    "previewImage": "Image"
-  },
-  "possibleTypes": ["ExternalVideo", "MediaImage", "Model3d", "Video"]
-};
-
-var MediaConnection = {
-  "name": "MediaConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "MediaEdge",
-    "nodes": "Media",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var MediaContentType = {
-  "name": "MediaContentType",
-  "kind": "ENUM"
-};
-
-var MediaEdge = {
-  "name": "MediaEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Media"
-  },
-  "implementsNode": false
-};
-
-var MediaHost = {
-  "name": "MediaHost",
-  "kind": "ENUM"
-};
-
-var MediaImage = {
-  "name": "MediaImage",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "alt": "String",
-    "id": "ID",
-    "image": "Image",
-    "mediaContentType": "MediaContentType",
-    "previewImage": "Image"
-  },
-  "implementsNode": true
-};
-
-var Menu = {
-  "name": "Menu",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "handle": "String",
-    "id": "ID",
-    "items": "MenuItem",
-    "itemsCount": "Int",
     "title": "String"
-  },
-  "implementsNode": true
-};
-
-var MenuItem = {
-  "name": "MenuItem",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "id": "ID",
-    "items": "MenuItem",
-    "resourceId": "ID",
-    "tags": "String",
-    "title": "String",
-    "type": "MenuItemType",
-    "url": "URL"
-  },
-  "implementsNode": true
-};
-
-var MenuItemType = {
-  "name": "MenuItemType",
-  "kind": "ENUM"
-};
-
-var Merchandise = {
-  "name": "Merchandise",
-  "kind": "UNION"
-};
-
-var Metafield = {
-  "name": "Metafield",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "createdAt": "DateTime",
-    "description": "String",
-    "id": "ID",
-    "key": "String",
-    "namespace": "String",
-    "parentResource": "MetafieldParentResource",
-    "reference": "MetafieldReference",
-    "type": "String",
-    "updatedAt": "DateTime",
-    "value": "String"
-  },
-  "implementsNode": true
-};
-
-var MetafieldFilter = {
-  "name": "MetafieldFilter",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "namespace": "String",
-    "key": "String",
-    "value": "String"
-  }
-};
-
-var MetafieldParentResource = {
-  "name": "MetafieldParentResource",
-  "kind": "UNION"
-};
-
-var MetafieldReference = {
-  "name": "MetafieldReference",
-  "kind": "UNION"
-};
-
-var Model3d = {
-  "name": "Model3d",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "alt": "String",
-    "id": "ID",
-    "mediaContentType": "MediaContentType",
-    "previewImage": "Image",
-    "sources": "Model3dSource"
-  },
-  "implementsNode": true
-};
-
-var Model3dSource = {
-  "name": "Model3dSource",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "filesize": "Int",
-    "format": "String",
-    "mimeType": "String",
-    "url": "String"
   },
   "implementsNode": false
 };
@@ -12063,15 +10606,6 @@ var Model3dSource = {
 var Money = {
   "name": "Money",
   "kind": "SCALAR"
-};
-
-var MoneyInput = {
-  "name": "MoneyInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "amount": "Decimal",
-    "currencyCode": "CurrencyCode"
-  }
 };
 
 var MoneyV2 = {
@@ -12088,21 +10622,8 @@ var Mutation$1 = {
   "name": "Mutation",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "cartAttributesUpdate": "CartAttributesUpdatePayload",
-    "cartBuyerIdentityUpdate": "CartBuyerIdentityUpdatePayload",
-    "cartCreate": "CartCreatePayload",
-    "cartDiscountCodesUpdate": "CartDiscountCodesUpdatePayload",
-    "cartLinesAdd": "CartLinesAddPayload",
-    "cartLinesRemove": "CartLinesRemovePayload",
-    "cartLinesUpdate": "CartLinesUpdatePayload",
-    "cartNoteUpdate": "CartNoteUpdatePayload",
     "checkoutAttributesUpdateV2": "CheckoutAttributesUpdateV2Payload",
-    "checkoutCompleteFree": "CheckoutCompleteFreePayload",
-    "checkoutCompleteWithCreditCardV2": "CheckoutCompleteWithCreditCardV2Payload",
-    "checkoutCompleteWithTokenizedPaymentV3": "CheckoutCompleteWithTokenizedPaymentV3Payload",
     "checkoutCreate": "CheckoutCreatePayload",
-    "checkoutCustomerAssociateV2": "CheckoutCustomerAssociateV2Payload",
-    "checkoutCustomerDisassociateV2": "CheckoutCustomerDisassociateV2Payload",
     "checkoutDiscountCodeApplyV2": "CheckoutDiscountCodeApplyV2Payload",
     "checkoutDiscountCodeRemove": "CheckoutDiscountCodeRemovePayload",
     "checkoutEmailUpdateV2": "CheckoutEmailUpdateV2Payload",
@@ -12112,23 +10633,7 @@ var Mutation$1 = {
     "checkoutLineItemsRemove": "CheckoutLineItemsRemovePayload",
     "checkoutLineItemsReplace": "CheckoutLineItemsReplacePayload",
     "checkoutLineItemsUpdate": "CheckoutLineItemsUpdatePayload",
-    "checkoutShippingAddressUpdateV2": "CheckoutShippingAddressUpdateV2Payload",
-    "checkoutShippingLineUpdate": "CheckoutShippingLineUpdatePayload",
-    "customerAccessTokenCreate": "CustomerAccessTokenCreatePayload",
-    "customerAccessTokenCreateWithMultipass": "CustomerAccessTokenCreateWithMultipassPayload",
-    "customerAccessTokenDelete": "CustomerAccessTokenDeletePayload",
-    "customerAccessTokenRenew": "CustomerAccessTokenRenewPayload",
-    "customerActivate": "CustomerActivatePayload",
-    "customerActivateByUrl": "CustomerActivateByUrlPayload",
-    "customerAddressCreate": "CustomerAddressCreatePayload",
-    "customerAddressDelete": "CustomerAddressDeletePayload",
-    "customerAddressUpdate": "CustomerAddressUpdatePayload",
-    "customerCreate": "CustomerCreatePayload",
-    "customerDefaultAddressUpdate": "CustomerDefaultAddressUpdatePayload",
-    "customerRecover": "CustomerRecoverPayload",
-    "customerReset": "CustomerResetPayload",
-    "customerResetByUrl": "CustomerResetByUrlPayload",
-    "customerUpdate": "CustomerUpdatePayload"
+    "checkoutShippingAddressUpdateV2": "CheckoutShippingAddressUpdateV2Payload"
   },
   "implementsNode": false,
   "relayInputObjectBaseTypes": {
@@ -12145,55 +10650,23 @@ var Mutation$1 = {
 var Node = {
   "name": "Node",
   "kind": "INTERFACE",
-  "fieldBaseTypes": {
-    "id": "ID"
-  },
+  "fieldBaseTypes": {},
   "possibleTypes": ["AppliedGiftCard", "Article", "Blog", "Cart", "CartLine", "Checkout", "CheckoutLineItem", "Collection", "Comment", "ExternalVideo", "GenericFile", "Location", "MailingAddress", "MediaImage", "Menu", "MenuItem", "Metafield", "Model3d", "Order", "Page", "Payment", "Product", "ProductOption", "ProductVariant", "Shop", "ShopPolicy", "UrlRedirect", "Video"]
-};
-
-var OnlineStorePublishable = {
-  "name": "OnlineStorePublishable",
-  "kind": "INTERFACE",
-  "fieldBaseTypes": {
-    "onlineStoreUrl": "URL"
-  },
-  "possibleTypes": ["Article", "Blog", "Collection", "Page", "Product"]
 };
 
 var Order = {
   "name": "Order",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "cancelReason": "OrderCancelReason",
-    "canceledAt": "DateTime",
     "currencyCode": "CurrencyCode",
-    "currentSubtotalPrice": "MoneyV2",
-    "currentTotalDuties": "MoneyV2",
-    "currentTotalPrice": "MoneyV2",
-    "currentTotalTax": "MoneyV2",
-    "customerLocale": "String",
     "customerUrl": "URL",
-    "discountApplications": "DiscountApplicationConnection",
-    "edited": "Boolean",
-    "email": "String",
-    "financialStatus": "OrderFinancialStatus",
-    "fulfillmentStatus": "OrderFulfillmentStatus",
     "id": "ID",
     "lineItems": "OrderLineItemConnection",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
-    "name": "String",
     "orderNumber": "Int",
-    "originalTotalDuties": "MoneyV2",
-    "originalTotalPrice": "MoneyV2",
-    "phone": "String",
     "processedAt": "DateTime",
     "shippingAddress": "MailingAddress",
-    "shippingDiscountAllocations": "DiscountAllocation",
-    "statusUrl": "URL",
     "subtotalPrice": "Money",
     "subtotalPriceV2": "MoneyV2",
-    "successfulFulfillments": "Fulfillment",
     "totalPrice": "Money",
     "totalPriceV2": "MoneyV2",
     "totalRefunded": "Money",
@@ -12206,51 +10679,11 @@ var Order = {
   "implementsNode": true
 };
 
-var OrderCancelReason = {
-  "name": "OrderCancelReason",
-  "kind": "ENUM"
-};
-
-var OrderConnection = {
-  "name": "OrderConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "OrderEdge",
-    "nodes": "Order",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var OrderEdge = {
-  "name": "OrderEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Order"
-  },
-  "implementsNode": false
-};
-
-var OrderFinancialStatus = {
-  "name": "OrderFinancialStatus",
-  "kind": "ENUM"
-};
-
-var OrderFulfillmentStatus = {
-  "name": "OrderFulfillmentStatus",
-  "kind": "ENUM"
-};
-
 var OrderLineItem = {
   "name": "OrderLineItem",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "currentQuantity": "Int",
     "customAttributes": "Attribute",
-    "discountAllocations": "DiscountAllocation",
-    "discountedTotalPrice": "MoneyV2",
-    "originalTotalPrice": "MoneyV2",
     "quantity": "Int",
     "title": "String",
     "variant": "ProductVariant"
@@ -12263,7 +10696,6 @@ var OrderLineItemConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "OrderLineItemEdge",
-    "nodes": "OrderLineItem",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
@@ -12279,115 +10711,25 @@ var OrderLineItemEdge = {
   "implementsNode": false
 };
 
-var OrderSortKeys = {
-  "name": "OrderSortKeys",
-  "kind": "ENUM"
-};
-
-var Page = {
-  "name": "Page",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "body": "HTML",
-    "bodySummary": "String",
-    "createdAt": "DateTime",
-    "handle": "String",
-    "id": "ID",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
-    "onlineStoreUrl": "URL",
-    "seo": "SEO",
-    "title": "String",
-    "updatedAt": "DateTime"
-  },
-  "implementsNode": true
-};
-
-var PageConnection = {
-  "name": "PageConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "PageEdge",
-    "nodes": "Page",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var PageEdge = {
-  "name": "PageEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Page"
-  },
-  "implementsNode": false
-};
-
 var PageInfo = {
   "name": "PageInfo",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "endCursor": "String",
     "hasNextPage": "Boolean",
-    "hasPreviousPage": "Boolean",
-    "startCursor": "String"
+    "hasPreviousPage": "Boolean"
   },
   "implementsNode": false
-};
-
-var PageSortKeys = {
-  "name": "PageSortKeys",
-  "kind": "ENUM"
-};
-
-var Payment = {
-  "name": "Payment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "amount": "Money",
-    "amountV2": "MoneyV2",
-    "billingAddress": "MailingAddress",
-    "checkout": "Checkout",
-    "creditCard": "CreditCard",
-    "errorMessage": "String",
-    "id": "ID",
-    "idempotencyKey": "String",
-    "nextActionUrl": "URL",
-    "ready": "Boolean",
-    "test": "Boolean",
-    "transaction": "Transaction"
-  },
-  "implementsNode": true
 };
 
 var PaymentSettings = {
   "name": "PaymentSettings",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "acceptedCardBrands": "CardBrand",
-    "cardVaultUrl": "URL",
     "countryCode": "CountryCode",
     "currencyCode": "CurrencyCode",
-    "enabledPresentmentCurrencies": "CurrencyCode",
-    "shopifyPaymentsAccountId": "String",
-    "supportedDigitalWallets": "DigitalWallet"
+    "enabledPresentmentCurrencies": "CurrencyCode"
   },
   "implementsNode": false
-};
-
-var PaymentTokenType = {
-  "name": "PaymentTokenType",
-  "kind": "ENUM"
-};
-
-var PriceRangeFilter = {
-  "name": "PriceRangeFilter",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "min": "Float",
-    "max": "Float"
-  }
 };
 
 var PricingPercentageValue = {
@@ -12410,39 +10752,23 @@ var Product = {
   "fieldBaseTypes": {
     "availableForSale": "Boolean",
     "collections": "CollectionConnection",
-    "compareAtPriceRange": "ProductPriceRange",
     "createdAt": "DateTime",
     "description": "String",
     "descriptionHtml": "HTML",
-    "featuredImage": "Image",
     "handle": "String",
     "id": "ID",
     "images": "ImageConnection",
-    "media": "MediaConnection",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
     "onlineStoreUrl": "URL",
     "options": "ProductOption",
-    "priceRange": "ProductPriceRange",
     "productType": "String",
     "publishedAt": "DateTime",
-    "requiresSellingPlan": "Boolean",
-    "sellingPlanGroups": "SellingPlanGroupConnection",
-    "seo": "SEO",
     "tags": "String",
     "title": "String",
-    "totalInventory": "Int",
     "updatedAt": "DateTime",
-    "variantBySelectedOptions": "ProductVariant",
     "variants": "ProductVariantConnection",
     "vendor": "String"
   },
   "implementsNode": true
-};
-
-var ProductCollectionSortKeys = {
-  "name": "ProductCollectionSortKeys",
-  "kind": "ENUM"
 };
 
 var ProductConnection = {
@@ -12450,8 +10776,6 @@ var ProductConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "ProductEdge",
-    "filters": "Filter",
-    "nodes": "Product",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
@@ -12467,54 +10791,14 @@ var ProductEdge = {
   "implementsNode": false
 };
 
-var ProductFilter = {
-  "name": "ProductFilter",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "available": "Boolean",
-    "variantOption": "VariantOptionFilter",
-    "productType": "String",
-    "productVendor": "String",
-    "price": "PriceRangeFilter",
-    "productMetafield": "MetafieldFilter",
-    "variantMetafield": "MetafieldFilter"
-  }
-};
-
-var ProductImageSortKeys = {
-  "name": "ProductImageSortKeys",
-  "kind": "ENUM"
-};
-
-var ProductMediaSortKeys = {
-  "name": "ProductMediaSortKeys",
-  "kind": "ENUM"
-};
-
 var ProductOption = {
   "name": "ProductOption",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "id": "ID",
     "name": "String",
     "values": "String"
   },
   "implementsNode": true
-};
-
-var ProductPriceRange = {
-  "name": "ProductPriceRange",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "maxVariantPrice": "MoneyV2",
-    "minVariantPrice": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var ProductSortKeys = {
-  "name": "ProductSortKeys",
-  "kind": "ENUM"
 };
 
 var ProductVariant = {
@@ -12522,28 +10806,19 @@ var ProductVariant = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "availableForSale": "Boolean",
-    "barcode": "String",
     "compareAtPrice": "Money",
     "compareAtPriceV2": "MoneyV2",
-    "currentlyNotInStock": "Boolean",
     "id": "ID",
     "image": "Image",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
     "price": "Money",
     "priceV2": "MoneyV2",
     "product": "Product",
-    "quantityAvailable": "Int",
-    "requiresShipping": "Boolean",
     "selectedOptions": "SelectedOption",
-    "sellingPlanAllocations": "SellingPlanAllocationConnection",
     "sku": "String",
-    "storeAvailability": "StoreAvailabilityConnection",
     "title": "String",
     "unitPrice": "MoneyV2",
     "unitPriceMeasurement": "UnitPriceMeasurement",
-    "weight": "Float",
-    "weightUnit": "WeightUnit"
+    "weight": "Float"
   },
   "implementsNode": true
 };
@@ -12553,7 +10828,6 @@ var ProductVariantConnection = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "edges": "ProductVariantEdge",
-    "nodes": "ProductVariant",
     "pageInfo": "PageInfo"
   },
   "implementsNode": false
@@ -12569,51 +10843,19 @@ var ProductVariantEdge = {
   "implementsNode": false
 };
 
-var ProductVariantSortKeys = {
-  "name": "ProductVariantSortKeys",
-  "kind": "ENUM"
-};
-
 var QueryRoot = {
   "name": "QueryRoot",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "articles": "ArticleConnection",
-    "blog": "Blog",
-    "blogByHandle": "Blog",
-    "blogs": "BlogConnection",
-    "cart": "Cart",
-    "collection": "Collection",
     "collectionByHandle": "Collection",
     "collections": "CollectionConnection",
-    "customer": "Customer",
     "localization": "Localization",
-    "locations": "LocationConnection",
-    "menu": "Menu",
     "node": "Node",
     "nodes": "Node",
-    "page": "Page",
-    "pageByHandle": "Page",
-    "pages": "PageConnection",
-    "product": "Product",
     "productByHandle": "Product",
     "productRecommendations": "Product",
-    "productTags": "StringConnection",
-    "productTypes": "StringConnection",
     "products": "ProductConnection",
-    "publicApiVersions": "ApiVersion",
-    "shop": "Shop",
-    "urlRedirects": "UrlRedirectConnection"
-  },
-  "implementsNode": false
-};
-
-var SEO = {
-  "name": "SEO",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "description": "String",
-    "title": "String"
+    "shop": "Shop"
   },
   "implementsNode": false
 };
@@ -12622,11 +10864,7 @@ var ScriptDiscountApplication = {
   "name": "ScriptDiscountApplication",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "allocationMethod": "DiscountApplicationAllocationMethod",
-    "targetSelection": "DiscountApplicationTargetSelection",
-    "targetType": "DiscountApplicationTargetType",
-    "title": "String",
-    "value": "PricingValue"
+    "title": "String"
   },
   "implementsNode": false
 };
@@ -12639,220 +10877,6 @@ var SelectedOption = {
     "value": "String"
   },
   "implementsNode": false
-};
-
-var SelectedOptionInput = {
-  "name": "SelectedOptionInput",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "name": "String",
-    "value": "String"
-  }
-};
-
-var SellingPlan = {
-  "name": "SellingPlan",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkoutCharge": "SellingPlanCheckoutCharge",
-    "description": "String",
-    "id": "ID",
-    "name": "String",
-    "options": "SellingPlanOption",
-    "priceAdjustments": "SellingPlanPriceAdjustment",
-    "recurringDeliveries": "Boolean"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanAllocation = {
-  "name": "SellingPlanAllocation",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "checkoutChargeAmount": "MoneyV2",
-    "priceAdjustments": "SellingPlanAllocationPriceAdjustment",
-    "remainingBalanceChargeAmount": "MoneyV2",
-    "sellingPlan": "SellingPlan"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanAllocationConnection = {
-  "name": "SellingPlanAllocationConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "SellingPlanAllocationEdge",
-    "nodes": "SellingPlanAllocation",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanAllocationEdge = {
-  "name": "SellingPlanAllocationEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "SellingPlanAllocation"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanAllocationPriceAdjustment = {
-  "name": "SellingPlanAllocationPriceAdjustment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "compareAtPrice": "MoneyV2",
-    "perDeliveryPrice": "MoneyV2",
-    "price": "MoneyV2",
-    "unitPrice": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanCheckoutCharge = {
-  "name": "SellingPlanCheckoutCharge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "type": "SellingPlanCheckoutChargeType",
-    "value": "SellingPlanCheckoutChargeValue"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanCheckoutChargePercentageValue = {
-  "name": "SellingPlanCheckoutChargePercentageValue",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "percentage": "Float"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanCheckoutChargeType = {
-  "name": "SellingPlanCheckoutChargeType",
-  "kind": "ENUM"
-};
-
-var SellingPlanCheckoutChargeValue = {
-  "name": "SellingPlanCheckoutChargeValue",
-  "kind": "UNION"
-};
-
-var SellingPlanConnection = {
-  "name": "SellingPlanConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "SellingPlanEdge",
-    "nodes": "SellingPlan",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanEdge = {
-  "name": "SellingPlanEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "SellingPlan"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanFixedAmountPriceAdjustment = {
-  "name": "SellingPlanFixedAmountPriceAdjustment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "adjustmentAmount": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanFixedPriceAdjustment = {
-  "name": "SellingPlanFixedPriceAdjustment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "price": "MoneyV2"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanGroup = {
-  "name": "SellingPlanGroup",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "appName": "String",
-    "name": "String",
-    "options": "SellingPlanGroupOption",
-    "sellingPlans": "SellingPlanConnection"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanGroupConnection = {
-  "name": "SellingPlanGroupConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "SellingPlanGroupEdge",
-    "nodes": "SellingPlanGroup",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanGroupEdge = {
-  "name": "SellingPlanGroupEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "SellingPlanGroup"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanGroupOption = {
-  "name": "SellingPlanGroupOption",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "name": "String",
-    "values": "String"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanOption = {
-  "name": "SellingPlanOption",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "name": "String",
-    "value": "String"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanPercentagePriceAdjustment = {
-  "name": "SellingPlanPercentagePriceAdjustment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "adjustmentPercentage": "Int"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanPriceAdjustment = {
-  "name": "SellingPlanPriceAdjustment",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "adjustmentValue": "SellingPlanPriceAdjustmentValue",
-    "orderCount": "Int"
-  },
-  "implementsNode": false
-};
-
-var SellingPlanPriceAdjustmentValue = {
-  "name": "SellingPlanPriceAdjustmentValue",
-  "kind": "UNION"
 };
 
 var ShippingRate = {
@@ -12872,18 +10896,12 @@ var Shop = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "description": "String",
-    "id": "ID",
-    "metafield": "Metafield",
-    "metafields": "Metafield",
     "moneyFormat": "String",
     "name": "String",
     "paymentSettings": "PaymentSettings",
     "primaryDomain": "Domain",
     "privacyPolicy": "ShopPolicy",
     "refundPolicy": "ShopPolicy",
-    "shippingPolicy": "ShopPolicy",
-    "shipsToCountries": "CountryCode",
-    "subscriptionPolicy": "ShopPolicyWithDefault",
     "termsOfService": "ShopPolicy"
   },
   "implementsNode": true
@@ -12894,7 +10912,6 @@ var ShopPolicy = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "body": "String",
-    "handle": "String",
     "id": "ID",
     "title": "String",
     "url": "URL"
@@ -12902,112 +10919,9 @@ var ShopPolicy = {
   "implementsNode": true
 };
 
-var ShopPolicyWithDefault = {
-  "name": "ShopPolicyWithDefault",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "body": "String",
-    "handle": "String",
-    "id": "ID",
-    "title": "String",
-    "url": "URL"
-  },
-  "implementsNode": false
-};
-
-var StoreAvailability = {
-  "name": "StoreAvailability",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "available": "Boolean",
-    "location": "Location",
-    "pickUpTime": "String"
-  },
-  "implementsNode": false
-};
-
-var StoreAvailabilityConnection = {
-  "name": "StoreAvailabilityConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "StoreAvailabilityEdge",
-    "nodes": "StoreAvailability",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var StoreAvailabilityEdge = {
-  "name": "StoreAvailabilityEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "StoreAvailability"
-  },
-  "implementsNode": false
-};
-
 var String$1 = {
   "name": "String",
   "kind": "SCALAR"
-};
-
-var StringConnection = {
-  "name": "StringConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "StringEdge",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var StringEdge = {
-  "name": "StringEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "String"
-  },
-  "implementsNode": false
-};
-
-var TokenizedPaymentInputV3 = {
-  "name": "TokenizedPaymentInputV3",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "paymentAmount": "MoneyInput",
-    "idempotencyKey": "String",
-    "billingAddress": "MailingAddressInput",
-    "paymentData": "String",
-    "test": "Boolean",
-    "identifier": "String",
-    "type": "PaymentTokenType"
-  }
-};
-
-var Transaction = {
-  "name": "Transaction",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "amount": "Money",
-    "amountV2": "MoneyV2",
-    "kind": "TransactionKind",
-    "status": "TransactionStatus",
-    "statusV2": "TransactionStatus",
-    "test": "Boolean"
-  },
-  "implementsNode": false
-};
-
-var TransactionKind = {
-  "name": "TransactionKind",
-  "kind": "ENUM"
-};
-
-var TransactionStatus = {
-  "name": "TransactionStatus",
-  "kind": "ENUM"
 };
 
 var URL = {
@@ -13038,43 +10952,6 @@ var UnitPriceMeasurementMeasuredUnit = {
   "kind": "ENUM"
 };
 
-var UnitSystem = {
-  "name": "UnitSystem",
-  "kind": "ENUM"
-};
-
-var UrlRedirect = {
-  "name": "UrlRedirect",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "id": "ID",
-    "path": "String",
-    "target": "String"
-  },
-  "implementsNode": true
-};
-
-var UrlRedirectConnection = {
-  "name": "UrlRedirectConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "UrlRedirectEdge",
-    "nodes": "UrlRedirect",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var UrlRedirectEdge = {
-  "name": "UrlRedirectEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "UrlRedirect"
-  },
-  "implementsNode": false
-};
-
 var UserError = {
   "name": "UserError",
   "kind": "OBJECT",
@@ -13085,215 +10962,16 @@ var UserError = {
   "implementsNode": false
 };
 
-var VariantOptionFilter = {
-  "name": "VariantOptionFilter",
-  "kind": "INPUT_OBJECT",
-  "inputFieldBaseTypes": {
-    "name": "String",
-    "value": "String"
-  }
-};
-
-var Video = {
-  "name": "Video",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "alt": "String",
-    "id": "ID",
-    "mediaContentType": "MediaContentType",
-    "previewImage": "Image",
-    "sources": "VideoSource"
-  },
-  "implementsNode": true
-};
-
-var VideoSource = {
-  "name": "VideoSource",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "format": "String",
-    "height": "Int",
-    "mimeType": "String",
-    "url": "String",
-    "width": "Int"
-  },
-  "implementsNode": false
-};
-
-var WeightUnit = {
-  "name": "WeightUnit",
-  "kind": "ENUM"
-};
-
-var __Directive = {
-  "name": "__Directive",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "args": "__InputValue",
-    "description": "String",
-    "isRepeatable": "Boolean",
-    "locations": "__DirectiveLocation",
-    "name": "String",
-    "onField": "Boolean",
-    "onFragment": "Boolean",
-    "onOperation": "Boolean"
-  },
-  "implementsNode": false
-};
-
-var __DirectiveLocation = {
-  "name": "__DirectiveLocation",
-  "kind": "ENUM"
-};
-
-var __EnumValue = {
-  "name": "__EnumValue",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "deprecationReason": "String",
-    "description": "String",
-    "isDeprecated": "Boolean",
-    "name": "String"
-  },
-  "implementsNode": false
-};
-
-var __Field = {
-  "name": "__Field",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "accessRestricted": "Boolean",
-    "accessRestrictedReason": "String",
-    "args": "__InputValue",
-    "deprecationReason": "String",
-    "description": "String",
-    "isDeprecated": "Boolean",
-    "name": "String",
-    "requiredAccess": "String",
-    "type": "__Type"
-  },
-  "implementsNode": false
-};
-
-var __InputValue = {
-  "name": "__InputValue",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "defaultValue": "String",
-    "deprecationReason": "String",
-    "description": "String",
-    "isDeprecated": "Boolean",
-    "name": "String",
-    "type": "__Type"
-  },
-  "implementsNode": false
-};
-
-var __Schema = {
-  "name": "__Schema",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "description": "String",
-    "directives": "__Directive",
-    "mutationType": "__Type",
-    "queryType": "__Type",
-    "subscriptionType": "__Type",
-    "types": "__Type"
-  },
-  "implementsNode": false
-};
-
-var __Type = {
-  "name": "__Type",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "accessRestricted": "Boolean",
-    "accessRestrictedReason": "String",
-    "componentName": "String",
-    "description": "String",
-    "enumValues": "__EnumValue",
-    "fields": "__Field",
-    "inputFields": "__InputValue",
-    "interfaces": "__Type",
-    "kind": "__TypeKind",
-    "name": "String",
-    "ofType": "__Type",
-    "possibleTypes": "__Type",
-    "requiredAccess": "String",
-    "specifiedByUrl": "String"
-  },
-  "implementsNode": false
-};
-
-var __TypeKind = {
-  "name": "__TypeKind",
-  "kind": "ENUM"
-};
-
 var Types = {
   types: {}
 };
-Types.types["ApiVersion"] = ApiVersion;
 Types.types["AppliedGiftCard"] = AppliedGiftCard;
-Types.types["Article"] = Article;
-Types.types["ArticleAuthor"] = ArticleAuthor;
-Types.types["ArticleConnection"] = ArticleConnection;
-Types.types["ArticleEdge"] = ArticleEdge;
-Types.types["ArticleSortKeys"] = ArticleSortKeys;
 Types.types["Attribute"] = Attribute;
-Types.types["AttributeInput"] = AttributeInput;
 Types.types["AutomaticDiscountApplication"] = AutomaticDiscountApplication;
-Types.types["AvailableShippingRates"] = AvailableShippingRates;
-Types.types["Blog"] = Blog;
-Types.types["BlogConnection"] = BlogConnection;
-Types.types["BlogEdge"] = BlogEdge;
-Types.types["BlogSortKeys"] = BlogSortKeys;
 Types.types["Boolean"] = Boolean$1;
-Types.types["CardBrand"] = CardBrand;
-Types.types["Cart"] = Cart;
-Types.types["CartAttributesUpdatePayload"] = CartAttributesUpdatePayload;
-Types.types["CartAutomaticDiscountAllocation"] = CartAutomaticDiscountAllocation;
-Types.types["CartBuyerIdentity"] = CartBuyerIdentity;
-Types.types["CartBuyerIdentityInput"] = CartBuyerIdentityInput;
-Types.types["CartBuyerIdentityUpdatePayload"] = CartBuyerIdentityUpdatePayload;
-Types.types["CartCodeDiscountAllocation"] = CartCodeDiscountAllocation;
-Types.types["CartCost"] = CartCost;
-Types.types["CartCreatePayload"] = CartCreatePayload;
-Types.types["CartCustomDiscountAllocation"] = CartCustomDiscountAllocation;
-Types.types["CartDeliveryGroup"] = CartDeliveryGroup;
-Types.types["CartDeliveryGroupConnection"] = CartDeliveryGroupConnection;
-Types.types["CartDeliveryGroupEdge"] = CartDeliveryGroupEdge;
-Types.types["CartDeliveryOption"] = CartDeliveryOption;
-Types.types["CartDiscountAllocation"] = CartDiscountAllocation;
-Types.types["CartDiscountCode"] = CartDiscountCode;
-Types.types["CartDiscountCodesUpdatePayload"] = CartDiscountCodesUpdatePayload;
-Types.types["CartErrorCode"] = CartErrorCode;
-Types.types["CartEstimatedCost"] = CartEstimatedCost;
-Types.types["CartInput"] = CartInput;
-Types.types["CartLine"] = CartLine;
-Types.types["CartLineConnection"] = CartLineConnection;
-Types.types["CartLineCost"] = CartLineCost;
-Types.types["CartLineEdge"] = CartLineEdge;
-Types.types["CartLineEstimatedCost"] = CartLineEstimatedCost;
-Types.types["CartLineInput"] = CartLineInput;
-Types.types["CartLineUpdateInput"] = CartLineUpdateInput;
-Types.types["CartLinesAddPayload"] = CartLinesAddPayload;
-Types.types["CartLinesRemovePayload"] = CartLinesRemovePayload;
-Types.types["CartLinesUpdatePayload"] = CartLinesUpdatePayload;
-Types.types["CartNoteUpdatePayload"] = CartNoteUpdatePayload;
-Types.types["CartUserError"] = CartUserError;
 Types.types["Checkout"] = Checkout;
-Types.types["CheckoutAttributesUpdateV2Input"] = CheckoutAttributesUpdateV2Input;
 Types.types["CheckoutAttributesUpdateV2Payload"] = CheckoutAttributesUpdateV2Payload;
-Types.types["CheckoutBuyerIdentity"] = CheckoutBuyerIdentity;
-Types.types["CheckoutBuyerIdentityInput"] = CheckoutBuyerIdentityInput;
-Types.types["CheckoutCompleteFreePayload"] = CheckoutCompleteFreePayload;
-Types.types["CheckoutCompleteWithCreditCardV2Payload"] = CheckoutCompleteWithCreditCardV2Payload;
-Types.types["CheckoutCompleteWithTokenizedPaymentV3Payload"] = CheckoutCompleteWithTokenizedPaymentV3Payload;
-Types.types["CheckoutCreateInput"] = CheckoutCreateInput;
 Types.types["CheckoutCreatePayload"] = CheckoutCreatePayload;
-Types.types["CheckoutCustomerAssociateV2Payload"] = CheckoutCustomerAssociateV2Payload;
-Types.types["CheckoutCustomerDisassociateV2Payload"] = CheckoutCustomerDisassociateV2Payload;
 Types.types["CheckoutDiscountCodeApplyV2Payload"] = CheckoutDiscountCodeApplyV2Payload;
 Types.types["CheckoutDiscountCodeRemovePayload"] = CheckoutDiscountCodeRemovePayload;
 Types.types["CheckoutEmailUpdateV2Payload"] = CheckoutEmailUpdateV2Payload;
@@ -13303,58 +10981,21 @@ Types.types["CheckoutGiftCardsAppendPayload"] = CheckoutGiftCardsAppendPayload;
 Types.types["CheckoutLineItem"] = CheckoutLineItem;
 Types.types["CheckoutLineItemConnection"] = CheckoutLineItemConnection;
 Types.types["CheckoutLineItemEdge"] = CheckoutLineItemEdge;
-Types.types["CheckoutLineItemInput"] = CheckoutLineItemInput;
-Types.types["CheckoutLineItemUpdateInput"] = CheckoutLineItemUpdateInput;
 Types.types["CheckoutLineItemsAddPayload"] = CheckoutLineItemsAddPayload;
 Types.types["CheckoutLineItemsRemovePayload"] = CheckoutLineItemsRemovePayload;
 Types.types["CheckoutLineItemsReplacePayload"] = CheckoutLineItemsReplacePayload;
 Types.types["CheckoutLineItemsUpdatePayload"] = CheckoutLineItemsUpdatePayload;
 Types.types["CheckoutShippingAddressUpdateV2Payload"] = CheckoutShippingAddressUpdateV2Payload;
-Types.types["CheckoutShippingLineUpdatePayload"] = CheckoutShippingLineUpdatePayload;
 Types.types["CheckoutUserError"] = CheckoutUserError;
 Types.types["Collection"] = Collection;
 Types.types["CollectionConnection"] = CollectionConnection;
 Types.types["CollectionEdge"] = CollectionEdge;
-Types.types["CollectionSortKeys"] = CollectionSortKeys;
-Types.types["Comment"] = Comment;
-Types.types["CommentAuthor"] = CommentAuthor;
-Types.types["CommentConnection"] = CommentConnection;
-Types.types["CommentEdge"] = CommentEdge;
 Types.types["Country"] = Country;
 Types.types["CountryCode"] = CountryCode;
-Types.types["CreditCard"] = CreditCard;
-Types.types["CreditCardPaymentInputV2"] = CreditCardPaymentInputV2;
-Types.types["CropRegion"] = CropRegion;
 Types.types["Currency"] = Currency;
 Types.types["CurrencyCode"] = CurrencyCode;
-Types.types["Customer"] = Customer;
-Types.types["CustomerAccessToken"] = CustomerAccessToken;
-Types.types["CustomerAccessTokenCreateInput"] = CustomerAccessTokenCreateInput;
-Types.types["CustomerAccessTokenCreatePayload"] = CustomerAccessTokenCreatePayload;
-Types.types["CustomerAccessTokenCreateWithMultipassPayload"] = CustomerAccessTokenCreateWithMultipassPayload;
-Types.types["CustomerAccessTokenDeletePayload"] = CustomerAccessTokenDeletePayload;
-Types.types["CustomerAccessTokenRenewPayload"] = CustomerAccessTokenRenewPayload;
-Types.types["CustomerActivateByUrlPayload"] = CustomerActivateByUrlPayload;
-Types.types["CustomerActivateInput"] = CustomerActivateInput;
-Types.types["CustomerActivatePayload"] = CustomerActivatePayload;
-Types.types["CustomerAddressCreatePayload"] = CustomerAddressCreatePayload;
-Types.types["CustomerAddressDeletePayload"] = CustomerAddressDeletePayload;
-Types.types["CustomerAddressUpdatePayload"] = CustomerAddressUpdatePayload;
-Types.types["CustomerCreateInput"] = CustomerCreateInput;
-Types.types["CustomerCreatePayload"] = CustomerCreatePayload;
-Types.types["CustomerDefaultAddressUpdatePayload"] = CustomerDefaultAddressUpdatePayload;
-Types.types["CustomerErrorCode"] = CustomerErrorCode;
-Types.types["CustomerRecoverPayload"] = CustomerRecoverPayload;
-Types.types["CustomerResetByUrlPayload"] = CustomerResetByUrlPayload;
-Types.types["CustomerResetInput"] = CustomerResetInput;
-Types.types["CustomerResetPayload"] = CustomerResetPayload;
-Types.types["CustomerUpdateInput"] = CustomerUpdateInput;
-Types.types["CustomerUpdatePayload"] = CustomerUpdatePayload;
-Types.types["CustomerUserError"] = CustomerUserError;
 Types.types["DateTime"] = DateTime;
 Types.types["Decimal"] = Decimal;
-Types.types["DeliveryMethodType"] = DeliveryMethodType;
-Types.types["DigitalWallet"] = DigitalWallet;
 Types.types["DiscountAllocation"] = DiscountAllocation;
 Types.types["DiscountApplication"] = DiscountApplication;
 Types.types["DiscountApplicationAllocationMethod"] = DiscountApplicationAllocationMethod;
@@ -13363,162 +11004,50 @@ Types.types["DiscountApplicationEdge"] = DiscountApplicationEdge;
 Types.types["DiscountApplicationTargetSelection"] = DiscountApplicationTargetSelection;
 Types.types["DiscountApplicationTargetType"] = DiscountApplicationTargetType;
 Types.types["DiscountCodeApplication"] = DiscountCodeApplication;
-Types.types["DisplayableError"] = DisplayableError;
 Types.types["Domain"] = Domain;
-Types.types["ExternalVideo"] = ExternalVideo;
-Types.types["Filter"] = Filter;
-Types.types["FilterType"] = FilterType;
-Types.types["FilterValue"] = FilterValue;
 Types.types["Float"] = Float;
-Types.types["Fulfillment"] = Fulfillment;
-Types.types["FulfillmentLineItem"] = FulfillmentLineItem;
-Types.types["FulfillmentLineItemConnection"] = FulfillmentLineItemConnection;
-Types.types["FulfillmentLineItemEdge"] = FulfillmentLineItemEdge;
-Types.types["FulfillmentTrackingInfo"] = FulfillmentTrackingInfo;
-Types.types["GenericFile"] = GenericFile;
-Types.types["GeoCoordinateInput"] = GeoCoordinateInput;
 Types.types["HTML"] = HTML;
-Types.types["HasMetafields"] = HasMetafields;
-Types.types["HasMetafieldsIdentifier"] = HasMetafieldsIdentifier;
 Types.types["ID"] = ID;
 Types.types["Image"] = Image;
 Types.types["ImageConnection"] = ImageConnection;
-Types.types["ImageContentType"] = ImageContentType;
 Types.types["ImageEdge"] = ImageEdge;
-Types.types["ImageTransformInput"] = ImageTransformInput;
 Types.types["Int"] = Int;
-Types.types["JSON"] = JSON$1;
 Types.types["Language"] = Language;
 Types.types["LanguageCode"] = LanguageCode;
 Types.types["Localization"] = Localization;
-Types.types["Location"] = Location;
-Types.types["LocationAddress"] = LocationAddress;
-Types.types["LocationConnection"] = LocationConnection;
-Types.types["LocationEdge"] = LocationEdge;
-Types.types["LocationSortKeys"] = LocationSortKeys;
 Types.types["MailingAddress"] = MailingAddress;
-Types.types["MailingAddressConnection"] = MailingAddressConnection;
-Types.types["MailingAddressEdge"] = MailingAddressEdge;
-Types.types["MailingAddressInput"] = MailingAddressInput;
 Types.types["ManualDiscountApplication"] = ManualDiscountApplication;
-Types.types["Media"] = Media;
-Types.types["MediaConnection"] = MediaConnection;
-Types.types["MediaContentType"] = MediaContentType;
-Types.types["MediaEdge"] = MediaEdge;
-Types.types["MediaHost"] = MediaHost;
-Types.types["MediaImage"] = MediaImage;
-Types.types["Menu"] = Menu;
-Types.types["MenuItem"] = MenuItem;
-Types.types["MenuItemType"] = MenuItemType;
-Types.types["Merchandise"] = Merchandise;
-Types.types["Metafield"] = Metafield;
-Types.types["MetafieldFilter"] = MetafieldFilter;
-Types.types["MetafieldParentResource"] = MetafieldParentResource;
-Types.types["MetafieldReference"] = MetafieldReference;
-Types.types["Model3d"] = Model3d;
-Types.types["Model3dSource"] = Model3dSource;
 Types.types["Money"] = Money;
-Types.types["MoneyInput"] = MoneyInput;
 Types.types["MoneyV2"] = MoneyV2;
 Types.types["Mutation"] = Mutation$1;
 Types.types["Node"] = Node;
-Types.types["OnlineStorePublishable"] = OnlineStorePublishable;
 Types.types["Order"] = Order;
-Types.types["OrderCancelReason"] = OrderCancelReason;
-Types.types["OrderConnection"] = OrderConnection;
-Types.types["OrderEdge"] = OrderEdge;
-Types.types["OrderFinancialStatus"] = OrderFinancialStatus;
-Types.types["OrderFulfillmentStatus"] = OrderFulfillmentStatus;
 Types.types["OrderLineItem"] = OrderLineItem;
 Types.types["OrderLineItemConnection"] = OrderLineItemConnection;
 Types.types["OrderLineItemEdge"] = OrderLineItemEdge;
-Types.types["OrderSortKeys"] = OrderSortKeys;
-Types.types["Page"] = Page;
-Types.types["PageConnection"] = PageConnection;
-Types.types["PageEdge"] = PageEdge;
 Types.types["PageInfo"] = PageInfo;
-Types.types["PageSortKeys"] = PageSortKeys;
-Types.types["Payment"] = Payment;
 Types.types["PaymentSettings"] = PaymentSettings;
-Types.types["PaymentTokenType"] = PaymentTokenType;
-Types.types["PriceRangeFilter"] = PriceRangeFilter;
 Types.types["PricingPercentageValue"] = PricingPercentageValue;
 Types.types["PricingValue"] = PricingValue;
 Types.types["Product"] = Product;
-Types.types["ProductCollectionSortKeys"] = ProductCollectionSortKeys;
 Types.types["ProductConnection"] = ProductConnection;
 Types.types["ProductEdge"] = ProductEdge;
-Types.types["ProductFilter"] = ProductFilter;
-Types.types["ProductImageSortKeys"] = ProductImageSortKeys;
-Types.types["ProductMediaSortKeys"] = ProductMediaSortKeys;
 Types.types["ProductOption"] = ProductOption;
-Types.types["ProductPriceRange"] = ProductPriceRange;
-Types.types["ProductSortKeys"] = ProductSortKeys;
 Types.types["ProductVariant"] = ProductVariant;
 Types.types["ProductVariantConnection"] = ProductVariantConnection;
 Types.types["ProductVariantEdge"] = ProductVariantEdge;
-Types.types["ProductVariantSortKeys"] = ProductVariantSortKeys;
 Types.types["QueryRoot"] = QueryRoot;
-Types.types["SEO"] = SEO;
 Types.types["ScriptDiscountApplication"] = ScriptDiscountApplication;
 Types.types["SelectedOption"] = SelectedOption;
-Types.types["SelectedOptionInput"] = SelectedOptionInput;
-Types.types["SellingPlan"] = SellingPlan;
-Types.types["SellingPlanAllocation"] = SellingPlanAllocation;
-Types.types["SellingPlanAllocationConnection"] = SellingPlanAllocationConnection;
-Types.types["SellingPlanAllocationEdge"] = SellingPlanAllocationEdge;
-Types.types["SellingPlanAllocationPriceAdjustment"] = SellingPlanAllocationPriceAdjustment;
-Types.types["SellingPlanCheckoutCharge"] = SellingPlanCheckoutCharge;
-Types.types["SellingPlanCheckoutChargePercentageValue"] = SellingPlanCheckoutChargePercentageValue;
-Types.types["SellingPlanCheckoutChargeType"] = SellingPlanCheckoutChargeType;
-Types.types["SellingPlanCheckoutChargeValue"] = SellingPlanCheckoutChargeValue;
-Types.types["SellingPlanConnection"] = SellingPlanConnection;
-Types.types["SellingPlanEdge"] = SellingPlanEdge;
-Types.types["SellingPlanFixedAmountPriceAdjustment"] = SellingPlanFixedAmountPriceAdjustment;
-Types.types["SellingPlanFixedPriceAdjustment"] = SellingPlanFixedPriceAdjustment;
-Types.types["SellingPlanGroup"] = SellingPlanGroup;
-Types.types["SellingPlanGroupConnection"] = SellingPlanGroupConnection;
-Types.types["SellingPlanGroupEdge"] = SellingPlanGroupEdge;
-Types.types["SellingPlanGroupOption"] = SellingPlanGroupOption;
-Types.types["SellingPlanOption"] = SellingPlanOption;
-Types.types["SellingPlanPercentagePriceAdjustment"] = SellingPlanPercentagePriceAdjustment;
-Types.types["SellingPlanPriceAdjustment"] = SellingPlanPriceAdjustment;
-Types.types["SellingPlanPriceAdjustmentValue"] = SellingPlanPriceAdjustmentValue;
 Types.types["ShippingRate"] = ShippingRate;
 Types.types["Shop"] = Shop;
 Types.types["ShopPolicy"] = ShopPolicy;
-Types.types["ShopPolicyWithDefault"] = ShopPolicyWithDefault;
-Types.types["StoreAvailability"] = StoreAvailability;
-Types.types["StoreAvailabilityConnection"] = StoreAvailabilityConnection;
-Types.types["StoreAvailabilityEdge"] = StoreAvailabilityEdge;
 Types.types["String"] = String$1;
-Types.types["StringConnection"] = StringConnection;
-Types.types["StringEdge"] = StringEdge;
-Types.types["TokenizedPaymentInputV3"] = TokenizedPaymentInputV3;
-Types.types["Transaction"] = Transaction;
-Types.types["TransactionKind"] = TransactionKind;
-Types.types["TransactionStatus"] = TransactionStatus;
 Types.types["URL"] = URL;
 Types.types["UnitPriceMeasurement"] = UnitPriceMeasurement;
 Types.types["UnitPriceMeasurementMeasuredType"] = UnitPriceMeasurementMeasuredType;
 Types.types["UnitPriceMeasurementMeasuredUnit"] = UnitPriceMeasurementMeasuredUnit;
-Types.types["UnitSystem"] = UnitSystem;
-Types.types["UrlRedirect"] = UrlRedirect;
-Types.types["UrlRedirectConnection"] = UrlRedirectConnection;
-Types.types["UrlRedirectEdge"] = UrlRedirectEdge;
 Types.types["UserError"] = UserError;
-Types.types["VariantOptionFilter"] = VariantOptionFilter;
-Types.types["Video"] = Video;
-Types.types["VideoSource"] = VideoSource;
-Types.types["WeightUnit"] = WeightUnit;
-Types.types["__Directive"] = __Directive;
-Types.types["__DirectiveLocation"] = __DirectiveLocation;
-Types.types["__EnumValue"] = __EnumValue;
-Types.types["__Field"] = __Field;
-Types.types["__InputValue"] = __InputValue;
-Types.types["__Schema"] = __Schema;
-Types.types["__Type"] = __Type;
-Types.types["__TypeKind"] = __TypeKind;
 Types.queryType = "QueryRoot";
 Types.mutationType = "Mutation";
 Types.subscriptionType = null;
@@ -13648,4 +11177,4 @@ var Client = function () {
 return Client;
 
 })));
-//# sourceMappingURL=index.unoptimized.umd.js.map
+//# sourceMappingURL=index.umd.js.map
