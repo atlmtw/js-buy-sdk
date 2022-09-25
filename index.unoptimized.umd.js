@@ -2432,6 +2432,46 @@ function query(client) {
   variables.__defaultOperation__.cursor = client.variable("cursor", "String");
   variables.__defaultOperation__.sortKey = client.variable("sortKey", "ProductCollectionSortKeys");
   variables.__defaultOperation__.reverse = client.variable("reverse", "Boolean");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -2588,55 +2628,33 @@ function query(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -2694,6 +2712,46 @@ function query$1(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.id = client.variable("id", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -2803,55 +2861,33 @@ function query$1(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -2890,6 +2926,46 @@ function query$2(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.ids = client.variable("ids", "[ID!]!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -2999,55 +3075,33 @@ function query$2(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -3089,6 +3143,46 @@ function query$3(client) {
   variables.__defaultOperation__.query = client.variable("query", "String");
   variables.__defaultOperation__.sortKey = client.variable("sortKey", "ProductSortKeys");
   variables.__defaultOperation__.reverse = client.variable("reverse", "Boolean");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -3198,55 +3292,33 @@ function query$3(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -3297,6 +3369,46 @@ function query$4(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.handle = client.variable("handle", "String!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -3406,55 +3518,33 @@ function query$4(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -3493,6 +3583,46 @@ function query$5(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.productId = client.variable("productId", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -3602,55 +3732,33 @@ function query$5(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -3922,6 +4030,46 @@ function query$7(client) {
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.id = client.variable("id", "ID!");
   variables.__defaultOperation__.productsFirst = client.variable("productsFirst", "Int!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -4078,55 +4226,33 @@ function query$7(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -4267,6 +4393,46 @@ function query$9(client) {
   variables.__defaultOperation__.sortKey = client.variable("sortKey", "CollectionSortKeys");
   variables.__defaultOperation__.reverse = client.variable("reverse", "Boolean");
   variables.__defaultOperation__.productsFirst = client.variable("productsFirst", "Int!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -4423,55 +4589,33 @@ function query$9(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });
@@ -4538,6 +4682,46 @@ function query$10(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.handle = client.variable("handle", "String!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -4647,55 +4831,33 @@ function query$10(client) {
         });
       });
     });
-    root.add("images", {
+    root.add("media", {
       args: {
         first: 250
       }
-    }, function (images) {
-      images.add("pageInfo", function (pageInfo) {
+    }, function (media) {
+      media.add("pageInfo", function (pageInfo) {
         pageInfo.add("hasNextPage");
         pageInfo.add("hasPreviousPage");
       });
-      images.add("edges", function (edges) {
+      media.add("edges", function (edges) {
         edges.add("cursor");
         edges.add("node", function (node) {
-          node.add("id");
-          node.add("url");
-          node.add("url", {
-            alias: "url_small_600",
-            args: {
-              transform: {
-                maxWidth: 600
-              }
-            }
+          node.add("alt");
+          node.add("mediaContentType");
+          node.addInlineFragmentOn("MediaImage", function (MediaImage) {
+            MediaImage.add("alt");
+            MediaImage.add("id");
+            MediaImage.add("image", function (image) {
+              image.addFragment(spreads.ImageFragment);
+            });
           });
-          node.add("url", {
-            alias: "url_medium_960",
-            args: {
-              transform: {
-                maxWidth: 960
-              }
-            }
+          node.addInlineFragmentOn("ExternalVideo", function (ExternalVideo) {
+            ExternalVideo.add("id");
+            ExternalVideo.add("host");
+            ExternalVideo.add("originUrl");
+            ExternalVideo.add("embedUrl");
           });
-          node.add("url", {
-            alias: "url_large_1200",
-            args: {
-              transform: {
-                maxWidth: 1200
-              }
-            }
-          });
-          node.add("url", {
-            alias: "url_xlarge_1920",
-            args: {
-              transform: {
-                maxWidth: 1920
-              }
-            }
-          });
-          node.add("altText");
-          node.add("width");
-          node.add("height");
         });
       });
     });

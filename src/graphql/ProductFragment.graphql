@@ -30,7 +30,7 @@ fragment ProductFragment on Product {
       }
     }
   }
-  images(first: 250) {
+  media(first: 250) {
     pageInfo {
       hasNextPage
       hasPreviousPage
@@ -38,18 +38,44 @@ fragment ProductFragment on Product {
     edges {
       cursor
       node {
-        id
-        url
-        url_small_600: url(transform: {maxWidth: 600})
-        url_medium_960: url(transform: {maxWidth: 960})
-        url_large_1200: url(transform: {maxWidth: 1200})
-        url_xlarge_1920: url(transform: {maxWidth: 1920})
-        altText
-        width
-        height
+        alt
+        mediaContentType
+        ... on MediaImage {
+          alt
+          id
+          image {
+            ...ImageFragment
+          }
+        }
+        ... on ExternalVideo {
+          id
+          host
+          originUrl
+          embedUrl
+        }
       }
     }
   }
+  # images(first: 250) {
+  #   pageInfo {
+  #     hasNextPage
+  #     hasPreviousPage
+  #   }
+  #   edges {
+  #     cursor
+  #     node {
+  #       id
+  #       url
+  #       url_small_600: url(transform: {maxWidth: 600})
+  #       url_medium_960: url(transform: {maxWidth: 960})
+  #       url_large_1200: url(transform: {maxWidth: 1200})
+  #       url_xlarge_1920: url(transform: {maxWidth: 1920})
+  #       altText
+  #       width
+  #       height
+  #     }
+  #   }
+  # }
   variants(first: 250) {
     pageInfo {
       hasNextPage
