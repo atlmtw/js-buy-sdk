@@ -2485,43 +2485,7 @@ function query(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -2755,43 +2719,7 @@ function query$1(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -2995,43 +2923,7 @@ function query$2(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -3238,43 +3130,7 @@ function query$3(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -3490,43 +3346,7 @@ function query$4(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -3730,43 +3550,7 @@ function query$5(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -4207,43 +3991,7 @@ function query$7(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -4564,43 +4312,7 @@ function query$9(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -4843,43 +4555,7 @@ function query$10(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -5398,6 +5074,46 @@ function query$14(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.id = client.variable("id", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -5417,43 +5133,7 @@ function query$14(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -5523,6 +5203,16 @@ function query$14(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.MailingAddressFragment = document.defineFragment("MailingAddressFragment", "MailingAddress", function (root) {
@@ -5730,6 +5420,46 @@ function query$15(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.input = client.variable("input", "CheckoutCreateInput!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -5749,43 +5479,7 @@ function query$15(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -5855,6 +5549,16 @@ function query$15(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -6080,6 +5784,46 @@ function query$16(client) {
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.checkoutId = client.variable("checkoutId", "ID!");
   variables.__defaultOperation__.lineItems = client.variable("lineItems", "[CheckoutLineItemInput!]!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -6099,43 +5843,7 @@ function query$16(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -6205,6 +5913,16 @@ function query$16(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -6431,6 +6149,46 @@ function query$17(client) {
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.checkoutId = client.variable("checkoutId", "ID!");
   variables.__defaultOperation__.lineItemIds = client.variable("lineItemIds", "[ID!]!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -6450,43 +6208,7 @@ function query$17(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -6556,6 +6278,16 @@ function query$17(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -6782,6 +6514,46 @@ function query$18(client) {
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.checkoutId = client.variable("checkoutId", "ID!");
   variables.__defaultOperation__.lineItems = client.variable("lineItems", "[CheckoutLineItemInput!]!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -6801,43 +6573,7 @@ function query$18(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -6907,6 +6643,16 @@ function query$18(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.CheckoutUserErrorFragment = document.defineFragment("CheckoutUserErrorFragment", "CheckoutUserError", function (root) {
@@ -7126,6 +6872,46 @@ function query$19(client) {
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.checkoutId = client.variable("checkoutId", "ID!");
   variables.__defaultOperation__.lineItems = client.variable("lineItems", "[CheckoutLineItemUpdateInput!]!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -7145,43 +6931,7 @@ function query$19(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -7251,6 +7001,16 @@ function query$19(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -7477,6 +7237,46 @@ function query$20(client) {
   variables.checkoutAttributesUpdateV2 = {};
   variables.checkoutAttributesUpdateV2.checkoutId = client.variable("checkoutId", "ID!");
   variables.checkoutAttributesUpdateV2.input = client.variable("input", "CheckoutAttributesUpdateV2Input!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -7496,43 +7296,7 @@ function query$20(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -7602,6 +7366,16 @@ function query$20(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -7828,6 +7602,46 @@ function query$21(client) {
   variables.checkoutDiscountCodeApplyV2 = {};
   variables.checkoutDiscountCodeApplyV2.discountCode = client.variable("discountCode", "String!");
   variables.checkoutDiscountCodeApplyV2.checkoutId = client.variable("checkoutId", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -7847,43 +7661,7 @@ function query$21(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -7953,6 +7731,16 @@ function query$21(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -8178,6 +7966,46 @@ function query$22(client) {
   var variables = {};
   variables.checkoutDiscountCodeRemove = {};
   variables.checkoutDiscountCodeRemove.checkoutId = client.variable("checkoutId", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -8197,43 +8025,7 @@ function query$22(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -8303,6 +8095,16 @@ function query$22(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -8528,6 +8330,46 @@ function query$23(client) {
   variables.checkoutGiftCardsAppend = {};
   variables.checkoutGiftCardsAppend.giftCardCodes = client.variable("giftCardCodes", "[String!]!");
   variables.checkoutGiftCardsAppend.checkoutId = client.variable("checkoutId", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -8547,43 +8389,7 @@ function query$23(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -8653,6 +8459,16 @@ function query$23(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -8879,6 +8695,46 @@ function query$24(client) {
   variables.checkoutGiftCardRemoveV2 = {};
   variables.checkoutGiftCardRemoveV2.appliedGiftCardId = client.variable("appliedGiftCardId", "ID!");
   variables.checkoutGiftCardRemoveV2.checkoutId = client.variable("checkoutId", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -8898,43 +8754,7 @@ function query$24(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -9004,6 +8824,16 @@ function query$24(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -9230,6 +9060,46 @@ function query$25(client) {
   variables.checkoutEmailUpdateV2 = {};
   variables.checkoutEmailUpdateV2.checkoutId = client.variable("checkoutId", "ID!");
   variables.checkoutEmailUpdateV2.email = client.variable("email", "String!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -9249,43 +9119,7 @@ function query$25(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -9355,6 +9189,16 @@ function query$25(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {
@@ -9581,6 +9425,46 @@ function query$26(client) {
   variables.checkoutShippingAddressUpdateV2 = {};
   variables.checkoutShippingAddressUpdateV2.shippingAddress = client.variable("shippingAddress", "MailingAddressInput!");
   variables.checkoutShippingAddressUpdateV2.checkoutId = client.variable("checkoutId", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
@@ -9600,43 +9484,7 @@ function query$26(client) {
       compareAtPriceV2.add("currencyCode");
     });
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
     root.add("selectedOptions", function (selectedOptions) {
       selectedOptions.add("name");
@@ -9706,6 +9554,16 @@ function query$26(client) {
       product.add("vendor");
       product.add("title");
       product.add("productType");
+      product.add("metafield", {
+        args: {
+          namespace: "product_fields",
+          key: "cart_recommendation"
+        }
+      }, function (metafield) {
+        metafield.add("value");
+        metafield.add("key");
+        metafield.add("type");
+      });
     });
   });
   spreads.UserErrorFragment = document.defineFragment("UserErrorFragment", "UserError", function (root) {

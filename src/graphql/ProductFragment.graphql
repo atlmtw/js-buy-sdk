@@ -16,7 +16,7 @@ fragment ProductFragment on Product {
     name
     values
   }
-  metafield(namespace:"product_fields", key:"cart_recommendation") {
+  metafield(namespace: "product_fields", key: "cart_recommendation") {
     value
     key
     type

@@ -3,5 +3,13 @@ fragment VariantWithProductFragment on ProductVariant {
   product {
     id
     handle
+    vendor
+    title
+    productType
+    metafield(namespace: "product_fields", key: "cart_recommendation") {
+      value
+      key
+      type
+    }
   }
 }
