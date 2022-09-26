@@ -6,14 +6,6 @@ fragment CollectionFragment on Collection {
   updatedAt
   title
   image {
-    id
-    url
-    url_small_600: url(transform: {maxWidth: 600}),
-    url_medium_960: url(transform: {maxWidth: 960}),
-    url_large_1200: url(transform: {maxWidth: 1200}),
-    url_xlarge_1920: url(transform: {maxWidth: 1920})
-    altText
-    width
-    height
+    ...ImageFragment
   }
 }

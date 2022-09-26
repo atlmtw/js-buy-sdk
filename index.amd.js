@@ -2549,43 +2549,7 @@ function query(client) {
     root.add("updatedAt");
     root.add("title");
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
   });
   spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
@@ -2605,6 +2569,15 @@ function query(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
     });
     root.add("collections", {
       args: {
@@ -2651,6 +2624,22 @@ function query(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -2839,6 +2828,15 @@ function query$1(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
+    });
     root.add("collections", {
       args: {
         first: 10
@@ -2884,6 +2882,22 @@ function query$1(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -3053,6 +3067,15 @@ function query$2(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
+    });
     root.add("collections", {
       args: {
         first: 10
@@ -3098,6 +3121,22 @@ function query$2(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -3270,6 +3309,15 @@ function query$3(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
+    });
     root.add("collections", {
       args: {
         first: 10
@@ -3315,6 +3363,22 @@ function query$3(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -3496,6 +3560,15 @@ function query$4(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
+    });
     root.add("collections", {
       args: {
         first: 10
@@ -3541,6 +3614,22 @@ function query$4(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -3710,6 +3799,15 @@ function query$5(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
+    });
     root.add("collections", {
       args: {
         first: 10
@@ -3755,6 +3853,22 @@ function query$5(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -3960,6 +4074,46 @@ function query$6(client) {
   var variables = {};
   variables.__defaultOperation__ = {};
   variables.__defaultOperation__.id = client.variable("id", "ID!");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.CollectionFragment = document.defineFragment("CollectionFragment", "Collection", function (root) {
     root.add("id");
     root.add("handle");
@@ -3968,43 +4122,7 @@ function query$6(client) {
     root.add("updatedAt");
     root.add("title");
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
   });
   document.addQuery([variables.__defaultOperation__.id], function (root) {
@@ -4147,43 +4265,7 @@ function query$7(client) {
     root.add("updatedAt");
     root.add("title");
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
   });
   spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
@@ -4203,6 +4285,15 @@ function query$7(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
     });
     root.add("collections", {
       args: {
@@ -4249,6 +4340,22 @@ function query$7(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -4308,6 +4415,46 @@ function query$8(client) {
   variables.__defaultOperation__.query = client.variable("query", "String");
   variables.__defaultOperation__.sortKey = client.variable("sortKey", "CollectionSortKeys");
   variables.__defaultOperation__.reverse = client.variable("reverse", "Boolean");
+  spreads.ImageFragment = document.defineFragment("ImageFragment", "Image", function (root) {
+    root.add("id");
+    root.add("src");
+    root.add("url");
+    root.add("url", {
+      alias: "url_small_600",
+      args: {
+        transform: {
+          maxWidth: 600
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_medium_960",
+      args: {
+        transform: {
+          maxWidth: 960
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_large_1200",
+      args: {
+        transform: {
+          maxWidth: 1200
+        }
+      }
+    });
+    root.add("url", {
+      alias: "url_xlarge_1920",
+      args: {
+        transform: {
+          maxWidth: 1920
+        }
+      }
+    });
+    root.add("altText");
+    root.add("width");
+    root.add("height");
+  });
   spreads.CollectionFragment = document.defineFragment("CollectionFragment", "Collection", function (root) {
     root.add("id");
     root.add("handle");
@@ -4316,43 +4463,7 @@ function query$8(client) {
     root.add("updatedAt");
     root.add("title");
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
   });
   document.addQuery([variables.__defaultOperation__.first, variables.__defaultOperation__.query, variables.__defaultOperation__.sortKey, variables.__defaultOperation__.reverse], function (root) {
@@ -4510,43 +4621,7 @@ function query$9(client) {
     root.add("updatedAt");
     root.add("title");
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
   });
   spreads.ProductFragment = document.defineFragment("ProductFragment", "Product", function (root) {
@@ -4566,6 +4641,15 @@ function query$9(client) {
     root.add("options", function (options) {
       options.add("name");
       options.add("values");
+    });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
     });
     root.add("collections", {
       args: {
@@ -4612,6 +4696,22 @@ function query$9(client) {
             ExternalVideo.add("originUrl");
             ExternalVideo.add("embedUrl");
           });
+        });
+      });
+    });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
         });
       });
     });
@@ -4809,6 +4909,15 @@ function query$10(client) {
       options.add("name");
       options.add("values");
     });
+    root.add("metafields", {
+      args: {
+        namespace: "product_fields",
+        key: "cart_recommendation"
+      }
+    }, function (metafields) {
+      metafields.add("value");
+      metafields.add("type");
+    });
     root.add("collections", {
       args: {
         first: 10
@@ -4857,6 +4966,22 @@ function query$10(client) {
         });
       });
     });
+    root.add("images", {
+      args: {
+        first: 250
+      }
+    }, function (images) {
+      images.add("pageInfo", function (pageInfo) {
+        pageInfo.add("hasNextPage");
+        pageInfo.add("hasPreviousPage");
+      });
+      images.add("edges", function (edges) {
+        edges.add("cursor");
+        edges.add("node", function (node) {
+          node.addFragment(spreads.ImageFragment);
+        });
+      });
+    });
     root.add("variants", {
       args: {
         first: 250
@@ -4882,43 +5007,7 @@ function query$10(client) {
     root.add("updatedAt");
     root.add("title");
     root.add("image", function (image) {
-      image.add("id");
-      image.add("url");
-      image.add("url", {
-        alias: "url_small_600",
-        args: {
-          transform: {
-            maxWidth: 600
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_medium_960",
-        args: {
-          transform: {
-            maxWidth: 960
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_large_1200",
-        args: {
-          transform: {
-            maxWidth: 1200
-          }
-        }
-      });
-      image.add("url", {
-        alias: "url_xlarge_1920",
-        args: {
-          transform: {
-            maxWidth: 1920
-          }
-        }
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
+      image.addFragment(spreads.ImageFragment);
     });
   });
   spreads.CollectionsProductsFragment = document.defineFragment("CollectionsProductsFragment", "Collection", function (root) {
@@ -10686,6 +10775,26 @@ var Image = {
   "implementsNode": false
 };
 
+var ImageConnection = {
+  "name": "ImageConnection",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "edges": "ImageEdge",
+    "pageInfo": "PageInfo"
+  },
+  "implementsNode": false
+};
+
+var ImageEdge = {
+  "name": "ImageEdge",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "cursor": "String",
+    "node": "Image"
+  },
+  "implementsNode": false
+};
+
 var Int = {
   "name": "Int",
   "kind": "SCALAR"
@@ -10801,6 +10910,16 @@ var MediaImage = {
     "alt": "String",
     "id": "ID",
     "image": "Image"
+  },
+  "implementsNode": true
+};
+
+var Metafield = {
+  "name": "Metafield",
+  "kind": "OBJECT",
+  "fieldBaseTypes": {
+    "type": "String",
+    "value": "String"
   },
   "implementsNode": true
 };
@@ -10959,7 +11078,9 @@ var Product = {
     "descriptionHtml": "HTML",
     "handle": "String",
     "id": "ID",
+    "images": "ImageConnection",
     "media": "MediaConnection",
+    "metafields": "Metafield",
     "onlineStoreUrl": "URL",
     "options": "ProductOption",
     "productType": "String",
@@ -11212,6 +11333,8 @@ Types.types["Float"] = Float;
 Types.types["HTML"] = HTML;
 Types.types["ID"] = ID;
 Types.types["Image"] = Image;
+Types.types["ImageConnection"] = ImageConnection;
+Types.types["ImageEdge"] = ImageEdge;
 Types.types["Int"] = Int;
 Types.types["Language"] = Language;
 Types.types["LanguageCode"] = LanguageCode;
@@ -11224,6 +11347,7 @@ Types.types["MediaContentType"] = MediaContentType;
 Types.types["MediaEdge"] = MediaEdge;
 Types.types["MediaHost"] = MediaHost;
 Types.types["MediaImage"] = MediaImage;
+Types.types["Metafield"] = Metafield;
 Types.types["Money"] = Money;
 Types.types["MoneyV2"] = MoneyV2;
 Types.types["Mutation"] = Mutation$1;

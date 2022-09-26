@@ -16,6 +16,10 @@ fragment ProductFragment on Product {
     name
     values
   }
+  metafields(namespace:"product_fields", key:"cart_recommendation") {
+    value
+    type
+  }
   collections(first: 10) {
     pageInfo {
       hasNextPage
@@ -56,26 +60,18 @@ fragment ProductFragment on Product {
       }
     }
   }
-  # images(first: 250) {
-  #   pageInfo {
-  #     hasNextPage
-  #     hasPreviousPage
-  #   }
-  #   edges {
-  #     cursor
-  #     node {
-  #       id
-  #       url
-  #       url_small_600: url(transform: {maxWidth: 600})
-  #       url_medium_960: url(transform: {maxWidth: 960})
-  #       url_large_1200: url(transform: {maxWidth: 1200})
-  #       url_xlarge_1920: url(transform: {maxWidth: 1920})
-  #       altText
-  #       width
-  #       height
-  #     }
-  #   }
-  # }
+  images(first: 250) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      cursor
+      node {
+        ...ImageFragment
+      }
+    }
+  }
   variants(first: 250) {
     pageInfo {
       hasNextPage
