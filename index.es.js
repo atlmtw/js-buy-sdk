@@ -2568,14 +2568,15 @@ function query(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -2826,14 +2827,15 @@ function query$1(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -3065,14 +3067,15 @@ function query$2(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -3307,14 +3310,15 @@ function query$3(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -3558,14 +3562,15 @@ function query$4(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -3797,14 +3802,15 @@ function query$5(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -4284,14 +4290,15 @@ function query$7(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -4640,14 +4647,15 @@ function query$9(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -4907,14 +4915,15 @@ function query$10(client) {
       options.add("name");
       options.add("values");
     });
-    root.add("metafields", {
+    root.add("metafield", {
       args: {
         namespace: "product_fields",
         key: "cart_recommendation"
       }
-    }, function (metafields) {
-      metafields.add("value");
-      metafields.add("type");
+    }, function (metafield) {
+      metafield.add("value");
+      metafield.add("key");
+      metafield.add("type");
     });
     root.add("collections", {
       args: {
@@ -10916,6 +10925,7 @@ var Metafield = {
   "name": "Metafield",
   "kind": "OBJECT",
   "fieldBaseTypes": {
+    "key": "String",
     "type": "String",
     "value": "String"
   },
@@ -11078,7 +11088,7 @@ var Product = {
     "id": "ID",
     "images": "ImageConnection",
     "media": "MediaConnection",
-    "metafields": "Metafield",
+    "metafield": "Metafield",
     "onlineStoreUrl": "URL",
     "options": "ProductOption",
     "productType": "String",

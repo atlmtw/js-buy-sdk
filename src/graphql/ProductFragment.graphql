@@ -18,6 +18,7 @@ fragment ProductFragment on Product {
   }
   metafield(namespace:"product_fields", key:"cart_recommendation") {
     value
+    key
     type
   }
   collections(first: 10) {
