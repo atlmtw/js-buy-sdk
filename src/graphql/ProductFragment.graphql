@@ -16,10 +16,10 @@ fragment ProductFragment on Product {
     name
     values
   }
-  metafields(namespace:"product_fields", key:"cart_recommendation") {
-    value
-    type
-  }
+  # metafields(namespace:"product_fields", key:"cart_recommendation") {
+  #   value
+  #   type
+  # }
   collections(first: 10) {
     pageInfo {
       hasNextPage
