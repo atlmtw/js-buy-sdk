@@ -2,23 +2,6 @@ fragment VariantWithProductFragment on ProductVariant {
   ...VariantFragment
   product {
     id
-    handle,
-    vendor,
-    title,
-    productType,
-    # metafields(first: 5) {
-    #   pageInfo {
-    #     hasNextPage
-    #     hasPreviousPage
-    #   }
-    #   edges {
-    #     cursor
-    #     node {
-    #       id
-    #       key
-    #       value
-    #     }
-    #   }
-    # }
+    handle
   }
 }
