@@ -9,6 +9,7 @@ import productNodeQuery from './graphql/productNodeQuery.graphql';
 import productNodesQuery from './graphql/productNodesQuery.graphql';
 import productConnectionQuery from './graphql/productConnectionQuery.graphql';
 import productByHandleQuery from './graphql/productByHandleQuery.graphql';
+import productWithMediaByHandleQuery from './graphql/productWithMediaByHandleQuery.graphql';
 import productRecommendationsQuery from './graphql/productRecommendations.graphql';
 
 /**
@@ -99,10 +100,28 @@ class ProductResource extends Resource {
    */
   fetchByHandle(handle) {
     return this.graphQLClient
-      .send(productByHandleQuery, {handle})
+      .send(productWithMediaByHandleQuery, {handle})
       .then(defaultResolver('productByHandle'))
       .then(paginateProductConnectionsAndResolve(this.graphQLClient));
   }
+
+    /**
+   * Fetches a single product by handle on the shop.
+   *
+   * @example
+   * client.product.fetchWithMediaByHandle('my-product').then((product) => {
+   *   // Do something with the product
+   * });
+   *
+   * @param {String} handle The handle of the product to fetch that comes with the media object.
+   * @return {Promise|GraphModel} A promise resolving with a `GraphModel` of the product.
+   */
+    //  fetchWithMediaByHandle(handle) {
+    //   return this.graphQLClient
+    //     .send(productWithMediaByHandleQuery, {handle})
+    //     .then(defaultResolver('productByHandle'))
+    //     .then(paginateProductConnectionsAndResolve(this.graphQLClient));
+    // }
 
   /**
    * Fetches all products on the shop that match the query.

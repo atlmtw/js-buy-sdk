@@ -1,4 +1,4 @@
-fragment ProductFragment on Product {
+fragment ProductFragmentMedia on Product {
   id
   availableForSale
   createdAt
@@ -32,6 +32,32 @@ fragment ProductFragment on Product {
         id
         title
         handle
+      }
+    }
+  }
+  media(first: 250) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      cursor
+      node {
+        alt
+        mediaContentType
+        ... on MediaImage {
+          alt
+          id
+          image {
+            ...ImageFragment
+          }
+        }
+        ... on ExternalVideo {
+          id
+          host
+          originUrl
+          embedUrl
+        }
       }
     }
   }
